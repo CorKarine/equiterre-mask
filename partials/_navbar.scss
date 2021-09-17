@@ -1,0 +1,15 @@
+@use 'mixin/text';
+@use 'mixin/title3';
+@use 'variables';
+.navbar{
+    background-color: black;
+    .nav-item{
+        @include text.text;
+        color: white;
+    }
+    &__btn{
+        background-color: variables.$titleColor;
+        @include title3.title3;
+        color: white;
+    }
+}
