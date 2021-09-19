@@ -1,19 +1,19 @@
 ### Client
-#### Équiterre
+Équiterre
 
 ### Équipe
-#### MASK
+MASK
 
 ### Membres
-#### -Marc-André Bouchard
-#### -Karine Cormier
-#### -Sabrina Kayani
+- Marc-André Bouchard
+- Karine Cormier
+- Sabrina Kayani
 
 ### 582-518MO Projet Web
 #### https://smnarnold.com/projets/obnl
 
 ### Trello
-#### https://trello.com/b/VCtr9yYC/equiterre-mask-ง︡-︠ง
+https://trello.com/b/VCtr9yYC/equiterre-mask-ง︡-︠ง
 
 ### Lien web
-#### https://equiterre.qc.lu/
+https://equiterre.qc.lu/
