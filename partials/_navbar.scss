@@ -1,15 +1,40 @@
 @use 'mixin/text';
 @use 'mixin/title3';
+@use 'mixin/dons';
 @use 'variables';
 .navbar{
     background-color: black;
-    .nav-item{
+    padding-top: 26px;
+    padding-left: 0px;
+    .collapse{
+    justify-content: center !important;
+
+    }
+    .navbar-toggler{
+        background-color: rgba(0, 0, 0, 0);
+        border-color: rgba(0, 0, 0, 0);
+    }
+    .navbar-toggler-icon{
+        background-image: url(../sources/medias/menu.png);
+        width: 28px;
+        height: 21px;
+    }
+    .nav-link{
         @include text.text;
-        color: white;
+        color: white !important;
+        padding-left: 0px !important;
+        padding-right: 23px !important;
+    }
+    @media (max-width: 1130px) {
+    .nav-link {
+      padding-right: 10px !important;
+    }
+  }
+    .nav-text{
+        padding-top: 5px;
     }
     &__btn{
-        background-color: variables.$titleColor;
-        @include title3.title3;
-        color: white;
+        @include dons.dons;
     }
 }
+
