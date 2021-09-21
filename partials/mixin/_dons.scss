@@ -1,0 +1,18 @@
+@use '../variables';
+@use 'title3';
+
+@mixin dons {
+    background-color: variables.$titleColor;
+    @include title3.title3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 170px;
+    height: 34px;
+    padding:auto;
+    
+    .heart{
+        height: 14px;
+        width: 13px;
+    }
+}
