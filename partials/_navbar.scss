@@ -3,7 +3,8 @@
 @use 'mixin/dons';
 @use 'variables';
 .navbar{
-    background-color: black;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0);
     padding-top: 26px;
     padding-left: 0px;
     text-align:center;
