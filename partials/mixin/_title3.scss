@@ -1,8 +1,0 @@
-@use '../variables';
-
-@mixin title3 {
-    font-size: 18px;
-    font-family: variables.$text;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
