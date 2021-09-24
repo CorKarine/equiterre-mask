@@ -1,7 +1,13 @@
 import './node_modules/bootstrap/dist/css/bootstrap.css';
 import './node_modules/bootstrap/dist/js/bootstrap';
-import 'gsap';
+import gsap from "gsap";
 import './main.scss';
+
+const navbar = document.querySelector(".navbar");
+const hamburger = document.querySelector(".navbar-toggler");
+hamburger.addEventListener('click', function(){
+  navbar.classList.toggle('navbarOpen');
+});
 const swiper = new Swiper('.swiper-container',{
     loop:true,
     navigation: {
@@ -13,3 +19,20 @@ const swiper = new Swiper('.swiper-container',{
         disableOnInteraction: false,
       },
   });
+  hamburger.addEventListener('mouseenter', function(){
+    gsap.fromTo(hamburger,{
+      opacity:1,
+      duration:1
+    },
+    {
+      opacity:0.1
+    })
+  });
+  
+  hamburger.addEventListener('mouseout', function(){
+    gsap.to(hamburger,{
+      opacity:1,
+    })
+  });
+  
+  
