@@ -1,6 +1,5 @@
 import './node_modules/bootstrap/dist/css/bootstrap.css';
 import './node_modules/bootstrap/dist/js/bootstrap';
-import 'swiper';
 import 'gsap';
 import './main.scss';
 const swiper = new Swiper('.swiper-container',{
@@ -10,7 +9,7 @@ const swiper = new Swiper('.swiper-container',{
         prevEl: ".swiper-button-prev",
       },
       autoplay: {
-        delay: 2000,
+        delay: 4000,
         disableOnInteraction: false,
       },
   });
