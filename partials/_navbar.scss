@@ -2,11 +2,12 @@
 @use 'mixin/titre3';
 @use 'mixin/dons';
 @use 'variables';
+
 .navbar{
-    z-index: 5;
+    z-index: 20;
     background-color: rgba(0, 0, 0, 0);
     padding-top: 26px;
-    padding-left: 0px;
+    padding-left: 41px;
     text-align:center;
     .collapse{
     justify-content: center !important;
@@ -26,11 +27,6 @@
         padding-left: 0px !important;
         padding-right: 23px !important;
     }
-    @media (max-width: 1130px) {
-    .nav-link {
-      padding-right: 10px !important;
-    }
-  }
     .nav-text{
         padding-top: 5px;
     }
