@@ -23,3 +23,15 @@
         color: rgb(2, 129, 12);
     }
 }
+
+.accueil__services {
+    background-color: variables.$terciere;
+    display:grid;
+   .service--un{
+       background-color: variables.$secondaire;
+   }
+
+   .service--trois{
+    background-color: variables.$secondaire;
+}
+}
