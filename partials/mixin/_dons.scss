@@ -1,9 +1,9 @@
 @use '../variables';
-@use 'title3';
+@use 'titre3';
 
 @mixin dons {
     background-color: variables.$titleColor;
-    @include title3.title3;
+    @include titre3.title3;
     color: white;
     border: none;
     border-radius: 4px;
