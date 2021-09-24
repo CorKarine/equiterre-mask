@@ -13,4 +13,4 @@ const swiper = new Swiper('.swiper-container',{
         delay: 2000,
         disableOnInteraction: false,
       },
-  })
+  });
