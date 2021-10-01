@@ -12,3 +12,6 @@
     margin-left: 40%;
     margin-top: 300px;
 }
+.plant{
+    transform: translate(20%, 50%);
+}
