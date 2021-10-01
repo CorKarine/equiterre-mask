@@ -1,5 +1,6 @@
 @use 'mixin/titre1';
 @use 'mixin/titre2';
+@use 'mixin/survole';
 @use 'variables';
 .accueil{
     overflow-x: hidden;
@@ -50,6 +51,15 @@
     &--desc{
         color:white;
         margin: 20px 40px 20px 40px;
+    }
+    &--bouton{
+        color: variables.$titleColor;
+        font-size: 20px;
+        &:hover{
+            text-decoration: none;
+            @include survole.survole;
+            color: variables.$titleColor;
+        }
     }
 }
 }
