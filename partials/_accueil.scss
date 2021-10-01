@@ -61,6 +61,51 @@
             color: variables.$titleColor;
         }
     }
+  }
 }
+/*
+@media (max-width: 768px){
+    .accueil__services{
+        .service{  
+            height: 259px;
+        &--desc{
+            font-size: 12px;
+        }
+        &--titre{
+            font-size: 18px; 
+        }
+        &--bouton{
+            font-size: 12px;
+        }
+        &--media{
+            width: 41px;
+            height: 41px;
+        }
+      }
+    }
+}*/
+/*
+@media (max-width : 375px){
+    .accueil__services{
+        grid-template-columns: 1fr;
+        .service{  
+            height: 120px;
+        &--desc{
+            display: none;
+        }
+        &--titre{
+            font-size: 18px;
+          
+        }
+        &--bouton{
+            font-size: 12px;
+        }
+        &--media{
+            width: 44px;
+            height: 44px;
+        }
+      }
+    }
 }
 
+*/
