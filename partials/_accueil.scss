@@ -26,12 +26,30 @@
 
 .accueil__services {
     background-color: variables.$terciere;
-    display:grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
    .service--un{
        background-color: variables.$secondaire;
    }
 
    .service--trois{
     background-color: variables.$secondaire;
+}
+
+.service{
+    height:329px;
+    &--media{
+        width:63px;
+        height:63px;
+        margin-top:20px;
+    }
+    &--titre{
+        @include titre2.title2;
+        color:white;
+    }
+    &--desc{
+        color:white;
+        margin: 20px 250px 20px 250px;
+    }
 }
 }
