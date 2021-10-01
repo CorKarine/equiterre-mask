@@ -51,6 +51,18 @@
     &__btn {
         @include dons.dons;
     }
+    .dropdown-menu{
+        background-color: rgba(0, 0, 0, 0.733);
+        }
+    .dropdown-item{
+        
+        color: white !important;
+        &:hover{
+            color: variables.$titleColor !important;
+            text-decoration: none !important;
+            background-color: rgba(0, 0, 0, 0.349) !important;
+    }
+    }
 }
 @media (max-width: 992px){
     .navbar{
