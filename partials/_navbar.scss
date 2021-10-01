@@ -3,35 +3,47 @@
 @use 'mixin/dons';
 @use 'variables';
 
-.navbar{
+.navbar {
     z-index: 20;
     background-color: rgba(0, 0, 0, 0);
     padding-top: 26px;
     padding-left: 41px;
-    text-align:center;
-    .collapse{
-    justify-content: center !important;
+    text-align: center;
+
+    .collapse {
+        justify-content: center !important;
     }
-    .navbar-toggler{
+
+    .navbar-toggler {
         background-color: rgba(0, 0, 0, 0);
         border-color: rgba(0, 0, 0, 0);
     }
-    .navbar-toggler-icon{
+
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler-icon:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
         background-image: url(../sources/medias/menu.png);
         width: 28px;
         height: 21px;
     }
-    .nav-link{
+
+    .nav-link {
         @include text.text;
         color: white !important;
         padding-left: 0px !important;
         padding-right: 23px !important;
     }
-    .nav-text{
+
+    .nav-text {
         padding-top: 5px;
     }
-    &__btn{
+
+    &__btn {
         @include dons.dons;
     }
 }
-
