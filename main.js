@@ -19,20 +19,19 @@ const swiper = new Swiper('.swiper-container',{
         disableOnInteraction: false,
       },
   });
+
+  let animHamburger = gsap.to(hamburger,{
+    duration:1,
+    rotate:360,
+    scale:1.1,
+  });
+  animHamburger.pause();
   hamburger.addEventListener('mouseenter', function(){
-    gsap.fromTo(hamburger,{
-      opacity:1,
-      duration:1
-    },
-    {
-      opacity:0.1
-    })
+    animHamburger.play(0);
   });
   
-  hamburger.addEventListener('mouseout', function(){
-    gsap.to(hamburger,{
-      opacity:1,
-    })
+  hamburger.addEventListener('mouseleave', function(){
+    animHamburger.pause(0);
   });
   
   
