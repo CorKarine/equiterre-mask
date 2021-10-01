@@ -25,7 +25,14 @@
         margin-left: 82.5px;
         &__btn{
             @include dons.dons;
+            font-size: 14px;
             margin-bottom: 19px;
+            width: 151px;
+            height: 30px;
+            .heart{
+                height: 12px;
+                width: 13px;
+            }
         }
         h4{
             @include titre3.title3;
@@ -34,5 +41,20 @@
             @include text.text;
         }
 
+    }
+}
+
+@media (max-width: 768px){
+    .footer{
+        height: 463px;
+        grid-template-columns:1fr;
+        text-align: center;
+        font-size: 17px;
+        &__separator{
+            display: none;
+        }
+        &__contact{
+            margin-left: 0;
+        }
     }
 }
