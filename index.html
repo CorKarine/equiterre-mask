@@ -63,9 +63,24 @@
     <div class="accueil__constraste"></div>
     <div class="swiper-container accueil__swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="sources/medias/accueil_arbre_hero.jpg"></div>
-        <div class="swiper-slide"><img src="sources/medias/accueil_foret_hero.jpg"> </div>
-        <div class="swiper-slide"><img src="sources/medias/accueil_paysage_hero.JPG"> </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="sources/medias/accueil_arbre_hero-small.jpg" media="(max-width: 700px)">
+            <img src="sources/medias/accueil_arbre_hero.jpg">
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="sources/medias/accueil_foret_hero-small.jpg" media="(max-width: 700px)">
+            <img src="sources/medias/accueil_foret_hero.jpg">
+          </picture> 
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="sources/medias/accueil_paysage_hero-small.jpg" media="(max-width: 700px)">
+          <img src="sources/medias/accueil_paysage_hero.JPG">
+        </picture> 
+      </div>
       </div>
       <div class="swiper-button-next accueil__swiper__btn"></div>
       <div class="swiper-button-prev accueil__swiper__btn"></div>
