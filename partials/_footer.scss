@@ -4,7 +4,20 @@
 @use 'mixin/text';
 
 .footer{
-    height: 330px;
+
+&__partenaire{
+    height: 129px;
+    background-color: variables.$primaire;
+    padding: 11px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    img{
+        height: 108px;
+    }
+}
+&__information{
+    height: 340px;
     background-color: variables.$secondaire;
     color: white;
     display: grid;
@@ -12,6 +25,19 @@
     text-align: left;
     padding-top: 20px;
     position: relative;
+
+    &__media{
+        padding-left: 86px;
+        margin-bottom: 46px;
+        &--sociaux{
+            width: 18px;
+            height: 18px;
+            margin-right: 16px;
+        }
+        p{
+            @include text.text;
+        }
+    }
 
     &__separator{
         border-left: 2px solid rgb(255, 255, 255);
@@ -22,7 +48,7 @@
         transform: translate(-50%, -50%);
     }
     &__contact{
-        margin-left: 82.5px;
+        padding-left: 82.5px;
         &__btn{
             @include dons.dons;
             font-size: 14px;
@@ -40,21 +66,53 @@
         p{
             @include text.text;
         }
+        a{
+            @include text.text;
+            text-decoration: none;
+            color: white;
+            &:hover{
+                color: white;
+                text-decoration: underline;
+            }
+        }
 
     }
 }
-
+}
 @media (max-width: 768px){
-    .footer{
-        height: 463px;
+    .footer__information{
+        height: 473px;
         grid-template-columns:1fr;
         text-align: center;
         font-size: 17px;
+        &__media{
+            padding-left: 0;
+        }
         &__separator{
             display: none;
         }
         &__contact{
-            margin-left: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .footer__partenaire{
+        height: 153px;
+
+        img{
+            height: 94px;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .footer__partenaire{
+        height: 101px;
+
+        img{
+            height: 48px;
         }
     }
 }
