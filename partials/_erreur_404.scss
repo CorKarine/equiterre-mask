@@ -1,6 +1,14 @@
 @use 'variables';
 @use 'mixin/titre1';
+@use 'mixin/titre2';
+
 .erreur{
     @include titre1.title1;
     color: variables.$titleColor;
+}
+
+.text{
+    @include titre2.title2;
+    color: variables.$secondaire;
+    
 }
