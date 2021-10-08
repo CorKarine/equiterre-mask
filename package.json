@@ -15,5 +15,17 @@
     "gsap": "^3.8.0",
     "sass": "^1.42.1",
     "swiper": "^7.0.7"
-  }
+  },
+  "description": "Équiterre",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CorKarine/equiterre-mask.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CorKarine/equiterre-mask/issues"
+  },
+  "homepage": "https://github.com/CorKarine/equiterre-mask#readme"
 }
