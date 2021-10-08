@@ -10,8 +10,8 @@
 }
 .textblock{
     margin-left: 40%;
-    margin-top: 0%;
+    margin-top: 15%;
 }
 .plant{
-    transform: translate(20%, 50%);
+    transform: translate(20%, 0%);
 }

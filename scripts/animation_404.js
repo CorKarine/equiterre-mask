@@ -7,7 +7,7 @@ gsap.timeline({
   })
 
   .to('.plant',
-    { x: '400%'})
+    { x: '200%'})
   .to('.plant',
     { rotateY: '180'})
   .to('.plant',
