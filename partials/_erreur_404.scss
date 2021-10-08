@@ -1,0 +1,6 @@
+@use 'variables';
+@use 'mixin/titre1';
+.erreur{
+    @include titre1.title1;
+    color: variables.$titleColor;
+}
