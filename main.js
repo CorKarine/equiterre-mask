@@ -34,7 +34,7 @@ const swiper = new Swiper('.swiper-container',{
     animHamburger.pause(0);
   });
   
- /* gsap.timeline({
+gsap.timeline({
     delay: 0,
     repeat: -1,
     yoyo: false,
@@ -42,13 +42,13 @@ const swiper = new Swiper('.swiper-container',{
     ease: "none",
   })
 
-  .to('.plant',
+ .to('.plant',
     { x: '200%'})
   .to('.plant',
     { rotateY: '180'})
   .to('.plant',
-    { x: '20%'})
+    { x: '0%'})
   .to('.plant',
-    { rotateY: '0'})*/
-  
+    { rotateY: '0'})
+
   
