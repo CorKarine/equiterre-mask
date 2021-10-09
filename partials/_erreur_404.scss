@@ -6,9 +6,14 @@
     @include titre1.title1;
     color: variables.$titleColor;
 }
-
 .text{
     @include titre2.title2;
     color: variables.$secondaire;
-    
+}
+.textblock{
+    margin-left: 40%;
+    margin-top: 15%;
+}
+.plant{
+    transform: translate(20%, 0%);
 }
