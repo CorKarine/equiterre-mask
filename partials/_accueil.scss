@@ -63,8 +63,8 @@
     }
   }
 }
-/*
-@media (max-width: 768px){
+
+@media (max-width: 1000px){
     .accueil__services{
         .service{  
             height: 259px;
@@ -84,7 +84,7 @@
       }
     }
 }
-*/
+
 @media (max-width : 768px){
     .accueil__services{
         grid-template-columns: 1fr;
