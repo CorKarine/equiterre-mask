@@ -1,5 +1,7 @@
 @use 'mixin/titre1';
 @use 'mixin/titre2';
+@use 'mixin/titre3';
+@use 'mixin/text';
 @use 'mixin/survole';
 @use 'variables';
 .accueil{
@@ -80,10 +82,35 @@
                     left:25px;
                     border: 4px white solid;
                     object-fit: cover;
-                  object-position:center;  
-                    
+                  object-position:center;    
                 }
             }
+            &--1{
+                .temoignage--nom{
+                    margin-left: 11px;
+                }
+                .temoignage--ville{
+                    margin-left: 2px;
+                }
+            }
+            &--3{
+                .temoignage--nom{
+                    margin-left: 30px;
+                }
+            }
+                &--nom{
+                    @include titre3.title3;
+                }
+                &--ville{
+                    @include text.text;
+                    font-size: 9px;
+                }
+                &--desc{
+                    text-align: left;
+                    padding: 10px;
+                    @include text.text;
+                    font-weight: 600;
+                }
         }
         
     }
