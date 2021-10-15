@@ -1,4 +1,4 @@
-
+//
 const navbar = document.querySelector(".navbar");
 const hamburger = document.querySelector(".navbar-toggler");
 hamburger.addEventListener('click', function(){
