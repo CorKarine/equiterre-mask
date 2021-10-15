@@ -5,15 +5,24 @@
 .erreur{
     @include titre1.title1;
     color: variables.$titleColor;
+    text-align: center;
 }
 .text{
     @include titre2.title2;
     color: variables.$secondaire;
+    text-align: center;
 }
 .textblock{
-    margin-top: 15%;
+    margin-top: 15%;  
 }
 .plant{
     display:block;
+    width:20vw;
+    height: auto;
     transform: translate(20%, 0%);
 }
+
+@media screen and (min-width: 1000px ){
+    .text {font-size: 100px;}
+    .erreur{font-size: 150px;}
+    }
