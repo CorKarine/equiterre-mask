@@ -3,6 +3,7 @@ import './node_modules/bootstrap/dist/js/bootstrap';
 import gsap from "gsap";
 import './main.scss';
 
+const breakpoint = window.matchMedia( '(min-width:992px)' );
 const navbar = document.querySelector(".navbar");
 const hamburger = document.querySelector(".navbar-toggler");
 hamburger.addEventListener('click', function(){
@@ -19,6 +20,50 @@ const swiper = new Swiper('.swiper-container',{
         disableOnInteraction: false,
       },
   });
+/*
+  const swiperTemoin = new Swiper('.swiper-temoignage',{ 
+    centeredSlides: true,
+    loop: true,
+    breakpoints: {
+          0 : {
+            slidesPerView: 'auto',
+            spaceBetween: 80,
+          },
+          768 : {
+            slidesPerView: 'auto',
+            spaceBetween: 80,
+          },
+        }
+    });*/
+
+  let swiperTemoignage;
+  const breakpointCheck = function(){
+    if(breakpoint.matches== true) {
+      if ( swiperTemoignage !== undefined ) swiperTemoignage.destroy(true, true);
+      return;
+    } else if (breakpoint.matches == false){
+      return activeSwiper();
+    }
+  }
+  const activeSwiper = function(){
+    swiperTemoignage = new Swiper('.swiper-temoignage',{ 
+      centeredSlides: true,
+      loop:true.valueOf,
+      breakpoints: {
+            0 : {
+              slidesPerView: 'auto',
+              spaceBetween: 80,
+            },
+            768 : {
+              slidesPerView: 'auto',
+              spaceBetween: 80,
+            },
+          }
+      });
+  }
+  breakpoint.addListener(breakpointCheck);
+
+  breakpointCheck();
 
   let animHamburger = gsap.to(hamburger,{
     duration:1,
