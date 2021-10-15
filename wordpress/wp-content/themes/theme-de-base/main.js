@@ -1,8 +1,3 @@
-/* Wow, tellement un beau spot pour écrire du JS */
-import './node_modules/bootstrap/dist/css/bootstrap.css';
-import './node_modules/bootstrap/dist/js/bootstrap';
-import gsap from "gsap";
-import './main.scss';
 
 const navbar = document.querySelector(".navbar");
 const hamburger = document.querySelector(".navbar-toggler");
