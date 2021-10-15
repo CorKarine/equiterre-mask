@@ -214,12 +214,29 @@
 }
 
 
+
+.accueil__don{
+    .don{
+  display: inline-block;
+    &--valeur{
+        @include titre1.title1;
+    }
+    &--titre{
+        @include text.text;
+        color:white;
+    }  
+}
 .don--fond{
-    /*background-image:url("../sources/medias/solidarity.png");*/
-    background-color: rgb(212, 191, 252);
-    height :50vw;
-&--container{
-    position: absolute;
-    top: 20%;
+   background-image:url(../sources/medias/bloc_don_eau.JPG);
+   background-repeat: no-repeat;
+   background-size: cover;
+   height : 40vw;
 }
 }
+
+.don--container{
+    position: relative;
+    margin-top: 5%;
+ display:grid;
+}
+
