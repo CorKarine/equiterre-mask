@@ -108,3 +108,26 @@
     }
 }
 
+.don{
+   &--fond{
+    width: 100vw;
+    height: 50vw;
+  
+   }
+   
+&--media{
+    width: 80px;
+    height: 80px;
+}
+}
+
+
+.don--fond{
+    /*background-image:url("../sources/medias/solidarity.png");*/
+    background-color: rgb(212, 191, 252);
+    height :50vw;
+&--container{
+    position: absolute;
+    top: 20%;
+}
+}
