@@ -1,5 +1,7 @@
 @use 'mixin/titre1';
 @use 'mixin/titre2';
+@use 'mixin/titre3';
+@use 'mixin/text';
 @use 'mixin/survole';
 @use 'variables';
 .accueil{
@@ -22,6 +24,96 @@
     a:hover {
         text-decoration: underline;
         color: rgb(2, 129, 12);
+    }
+
+    &__temoignage{
+        position: relative;
+        display: flex;
+        background-image: url(../sources/medias/bloc_temoignage_mains.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 415px;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+
+        &__titre{
+            @include titre2.title2;
+            color: white;
+            position: absolute;
+            z-index: 10;
+            top: 43px;
+        }
+
+        &__contraste{
+        background-color: rgb(0, 0, 0);
+        opacity: 37%;
+        height: 415px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+        &__cartes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        .cartes--grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+            gap:70px;
+            margin-top: 35px;
+}
+        .temoignage{
+            width: 284px;
+            height: 148px;
+            background-color: white;
+            z-index: 25;
+            border-radius: 12px;
+            position: relative;
+            &--media{
+                img{
+                    width: 76px;
+                    height: 76px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top:-33px;
+                    left:25px;
+                    border: 4px white solid;
+                    object-fit: cover;
+                  object-position:center;    
+                }
+            }
+            &--1{
+                .temoignage--nom{
+                    margin-left: 11px;
+                }
+                .temoignage--ville{
+                    margin-left: 2px;
+                }
+            }
+            &--3{
+                .temoignage--nom{
+                    margin-left: 30px;
+                }
+            }
+                &--nom{
+                    @include titre3.title3;
+                }
+                &--ville{
+                    @include text.text;
+                    font-size: 9px;
+                }
+                &--desc{
+                    text-align: left;
+                    padding: 10px;
+                    @include text.text;
+                    font-weight: 600;
+                }
+        }
+        
+    }
     }
 }
 
