@@ -255,3 +255,20 @@
     transform: translate(-50%, 0);
 }
 
+@media (max-width: 992px){
+    .don{
+        &--mission{
+         font-size: 20px;
+         margin-top: 2%; 
+        }   
+        &--media{
+         width: 50px;
+         height: 50px;  
+        }
+      
+    }
+.don--titre{
+    color: red;
+}
+ 
+}
