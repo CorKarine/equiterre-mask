@@ -355,7 +355,7 @@
     .don{
         &--mission{
          font-size: 20px;
-         margin-top: 2%; 
+         margin-top: 60px; 
         }   
         &--media{
          width: 50px;
@@ -394,7 +394,16 @@
       &--fond{
           height: 471px !important;
       }
+      
     }
+   
+}
 
- 
+hr.don--separation{
+    border: 3px solid white;
+    background-color: white;
+    width: 70%;
+    margin-left: 15%;
+    position: relative;
+    top: 10%;
 }
