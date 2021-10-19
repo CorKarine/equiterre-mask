@@ -91,22 +91,13 @@ gsap.timeline({
     { x: '77vw'})
   .to('.plant',
     { rotateY: '180'})
+    .to('.erreur',
+    { color:'#041C04'})
   .to('.plant',
     { x: '5vw'})
   .to('.plant',
     { rotateY: '0'})
-
-    gsap.timeline({
-      delay: 0,
-      repeat: -1,
-      yoyo: false,
-      repeatDelay: 0,
-      ease: "none",
-    })
-
-.to('.erreur',
-    { color:'#ECB338'})
-    .to('.erreur',
-    { color:'#041C04'})
     .to('.erreur',
     { color:'#ECB338'})
+
+   
