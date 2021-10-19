@@ -271,6 +271,9 @@
    margin-top: 10%;
    margin-bottom: 2%;
 }
+&--ligne{
+    height: 20px;
+}
 }
 
 .accueil__don{ 
@@ -288,15 +291,15 @@
    background-image: url(../sources/medias/bloc_don_eau.JPG);
    background-repeat: no-repeat;
    background-size: cover;
-   height : 40vw;
+   height : 49vw;
    padding-top: 2%;
 }
 }
 
 .don--container{
-   display: flex;
-   justify-content: space-evenly;
-   
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .don--btn{
@@ -318,6 +321,36 @@
         }
       &--valeur{
           font-size: 25px !important;
+      }
+      &--container{
+        margin-top: 50px;
+    }
+    }
+
+ 
+}
+
+@media (max-width: 768px){
+    .don{
+        &--mission{
+         font-size: 18px;
+        margin-top: 150px;
+        }   
+        &--media{
+         width: 30px;
+         height: 30px;  
+        }
+      &--valeur{
+          font-size: 21px !important;
+      }
+      &--container{
+          margin-top: 30px;
+      }
+      &--titre{
+          font-size: 9px !important;
+      }
+      &--fond{
+          height: 471px !important;
       }
     }
 
