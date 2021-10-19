@@ -249,6 +249,48 @@
         }
       }
     }
+    .accueil{
+        &__temoignage{
+            height: 370px;
+            &__contraste{
+            height: 370px;
+            }
+            &__titre{
+                font-size: 31px;
+            }
+            &__cartes{
+                margin-right: 30px;
+                margin-top: 50px;
+                .swiper-slide-active{
+                    transform: scale(1.3);
+                    z-index: 30;
+                    opacity: 1 !important;
+                }
+                .temoignage{
+                    width: 232px;
+                    height: 121px;
+                    opacity: 0.78;
+                
+                    &--media{
+                        img{
+                            width: 62px;
+                            height: 62px; 
+                        }
+                    }
+
+                    &--nom{
+                        font-size: 14px;
+                    }
+                    &--ville{
+                        font-size: 6px;
+                    }
+                    &--desc{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .don{
