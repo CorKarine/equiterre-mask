@@ -52,7 +52,7 @@ const swiper = new Swiper('.swiper-container',{
       breakpoints: {
             0 : {
               slidesPerView: 'auto',
-              spaceBetween: 80,
+              spaceBetween: 50,
             },
             768 : {
               slidesPerView: 'auto',
