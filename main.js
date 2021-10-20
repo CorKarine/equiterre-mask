@@ -37,9 +37,11 @@ const swiper = new Swiper('.swiper-container',{
     });*/
 
   let swiperTemoignage;
+  let swiperNouvelle;
   const breakpointCheck = function(){
     if(breakpoint.matches== true) {
       if ( swiperTemoignage !== undefined ) swiperTemoignage.destroy(true, true);
+      if ( swiperTemoignage !== undefined ) swiperNouvelle.destroy(true, true);
       return;
     } else if (breakpoint.matches == false){
       return activeSwiper();
@@ -60,6 +62,20 @@ const swiper = new Swiper('.swiper-container',{
             },
           }
       });
+      swiperNouvelle = new Swiper('.swiper-nouvelle',{ 
+        centeredSlides: true,
+        loop:true.valueOf,
+        breakpoints: {
+              0 : {
+                slidesPerView: 'auto',
+                spaceBetween: 50,
+              },
+              768 : {
+                slidesPerView: 'auto',
+                spaceBetween: 90,
+              },
+            }
+        });
   }
   breakpoint.addListener(breakpointCheck);
 

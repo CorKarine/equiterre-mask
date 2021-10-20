@@ -26,7 +26,72 @@
         text-decoration: underline;
         color: rgb(2, 129, 12);
     }
-
+    &__nouvelle{
+        height: 620px;
+        width: 100%;
+        position: relative;
+        background-color: variables.$primaire;
+        padding-top: 73px;
+        text-align: center;
+        &__titre{
+            @include titre2.title2;
+        }
+        .swiper-nouvelle{
+            width: 100%;
+        }
+        .swiper-wrapper{
+            justify-content: space-evenly;
+        }
+        &__cartes{
+            position: relative;
+            margin-top: 56px;
+            .carte{
+            height: 392px;
+            width: 273px;
+            border-radius: 16px;
+            background-color: white;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__contraste{
+                position: absolute;
+                background-color: rgba(231, 0, 0, 0);
+                height: 485px;
+                width: 339.83px;
+                }
+            img{
+                width: 273px;
+                height: 200px;
+                top: 0;
+                border-top-left-radius: 16px;
+                border-top-right-radius: 16px;
+            }
+            &__info{
+            padding: 24px 24px 0px 24px;
+            h4{
+                @include titre3.title3;
+                text-transform: none;
+            }
+            &__desc{
+                @include text.text;
+            }
+        }
+            &__footer{
+                width: 210px;
+                color: variables.$titleColor;
+                position: relative;
+                @include titre3.title3;
+                display: flex;
+                justify-content:space-between;
+                padding-top: 20px;
+                a{
+                    color: variables.$titleColor;
+                }
+            }
+            }
+        }
+    }
     &__temoignage{
         position: relative;
         display: flex;
@@ -184,6 +249,37 @@
       }
     }
     .accueil{
+        &__nouvelle{
+            position: relative;
+            width: 100%;
+            height: 831px;
+            &__cartes{
+                margin-top: 60px;
+                .swiper-slide-duplicate-active{
+                    transform: scale(1.2);
+                    z-index: 30;
+                    .carte__contraste{
+                        background-color: rgba(255, 255, 255, 0)
+                    }
+                }
+                .carte{
+                    height: 485px;
+                    width: 339.83px;
+                    &__contraste{
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, 0.18);
+                    height: 485px;
+                    border-radius: 16px;
+                    z-index: 20;
+                    width: 339.83px;
+                    }
+                    img{
+                        height: 249px;
+                        width: 339.83px;
+                    }
+                }
+            }
+        }
         &__temoignage{
             position: relative;
             width: 100%;
@@ -195,7 +291,6 @@
                 font-size: 31px;
             }
             &__cartes{
-                margin-right: 30px;
                 margin-top: 50px;
                 .swiper-slide-active{
                     transform: scale(1.5);
@@ -259,7 +354,6 @@
                 font-size: 31px;
             }
             &__cartes{
-                margin-right: 30px;
                 margin-top: 50px;
                 .swiper-slide-active{
                     transform: scale(1.3);
