@@ -468,9 +468,11 @@
 
 @media (max-width: 768px){
     .don{
+        grid-template-columns: 1fr 1fr ;
+        
         &--mission{
          font-size: 18px;
-        margin-top: 140px !important;
+         margin-top: 10px !important;
         }   
         &--media{
          width: 30px;
@@ -480,7 +482,9 @@
           font-size: 21px !important;
       }
       &--container{
-          margin-top: 30px;
+          margin-top: 10px;
+         display: grid; 
+          row-gap: 30px;
       }
       &--titre{
           font-size: 9px !important;
@@ -490,14 +494,12 @@
       }
       
     }
-   
 }
 
 @media (max-width: 1000px){
     .don{
         &--mission{
          font-size: 18px;
-        margin-top: 100px !important;
         }   
         &--media{
          width: 30px;
@@ -505,9 +507,6 @@
         }
       &--valeur{
           font-size: 21px !important;
-      }
-      &--container{
-          margin-top: 30px;
       }
       &--titre{
           font-size: 9px !important;
@@ -534,8 +533,6 @@
         margin-top: 50px;
     }
     }
-
- 
 }
 
 /*hr.don--separation{
