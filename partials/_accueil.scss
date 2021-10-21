@@ -449,7 +449,7 @@
     .don{
         &--mission{
          font-size: 20px;
-         margin-top: 60px; 
+         margin-top: 60px !important; 
         }   
         &--media{
          width: 50px;
@@ -470,7 +470,7 @@
     .don{
         &--mission{
          font-size: 18px;
-        margin-top: 150px;
+        margin-top: 140px !important;
         }   
         &--media{
          width: 30px;
@@ -493,7 +493,52 @@
    
 }
 
-hr.don--separation{
+@media (max-width: 1000px){
+    .don{
+        &--mission{
+         font-size: 18px;
+        margin-top: 100px !important;
+        }   
+        &--media{
+         width: 30px;
+         height: 30px;  
+        }
+      &--valeur{
+          font-size: 21px !important;
+      }
+      &--container{
+          margin-top: 30px;
+      }
+      &--titre{
+          font-size: 9px !important;
+      }
+      &--fond{
+          height: 471px !important;
+      }
+      
+    }
+   
+}
+
+@media (max-width: 1300px){
+    .don{
+        &--mission{
+         margin-top: 20px; 
+        }   
+        &--media{
+         width: 50px;
+         height: 50px;  
+        }
+    
+      &--container{
+        margin-top: 50px;
+    }
+    }
+
+ 
+}
+
+/*hr.don--separation{
     border: 3px solid white;
     background-color: white;
     width: 70%;
@@ -501,4 +546,4 @@ hr.don--separation{
     position: relative;
     top: 10%;
 }
-
+*/
