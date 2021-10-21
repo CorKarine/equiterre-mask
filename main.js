@@ -117,3 +117,14 @@ gsap.timeline({
     { color:'#ECB338'})
 
    
+    gsap.timeline({
+      defaults:{}
+    })
+      .to ('.don--btn',{
+    scale:1.2,
+    yoyo: true,
+    ease: Power0.easeNone,
+    duration: 0.9,
+    repeat:-1,
+     });
+  
