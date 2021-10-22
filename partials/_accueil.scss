@@ -33,14 +33,10 @@
         background-color: variables.$primaire;
         padding-top: 73px;
         text-align: center;
-        display: flex;
-        justify-content: center;
         &__titre{
             @include titre2.title2;
-            position: absolute;
         }
         .swiper-nouvelle{
-            margin-top: 100px;
             width: 100%;
         }
         .swiper-wrapper{
@@ -48,10 +44,10 @@
         }
         &__cartes{
             position: relative;
+            margin-top: 56px;
             .carte{
             height: 392px;
             width: 273px;
-            position: relative;
             border-radius: 16px;
             background-color: white;
             text-align: left;
@@ -61,11 +57,11 @@
             &__contraste{
                 position: absolute;
                 background-color: rgba(231, 0, 0, 0);
-                height: 100%;
-                width: 100%;
+                height: 485px;
+                width: 339.83px;
                 }
             img{
-                width: 100%;
+                width: 273px;
                 height: 200px;
                 top: 0;
                 border-top-left-radius: 16px;
@@ -82,13 +78,13 @@
             }
         }
             &__footer{
-                width: 100%;
+                width: 210px;
                 color: variables.$titleColor;
                 position: relative;
                 @include titre3.title3;
                 display: flex;
                 justify-content:space-between;
-                padding: 20px;
+                padding-top: 20px;
                 a{
                     color: variables.$titleColor;
                 }
@@ -256,10 +252,7 @@
         &__nouvelle{
             position: relative;
             width: 100%;
-            height: 631px;
-            .swiper-nouvelle{
-                margin-top: 50px;
-            }
+            height: 831px;
             &__cartes{
                 margin-top: 60px;
                 .swiper-slide-duplicate-active{
@@ -270,28 +263,20 @@
                     }
                 }
                 .carte{
-                    height: 385px;
-                    width: 250.83px;
+                    height: 485px;
+                    width: 339.83px;
                     &__contraste{
+                    position: absolute;
                     background-color: rgba(0, 0, 0, 0.18);
+                    height: 485px;
                     border-radius: 16px;
+                    z-index: 20;
+                    width: 339.83px;
                     }
                     img{
                         height: 249px;
-                        width: 100%;
+                        width: 339.83px;
                     }
-                    &__info{
-                        padding: 24px 24px 0px 24px;
-                        h4{
-                            font-size: 22px;
-                        }
-                        &__desc{
-                            font-size: 18px;
-                        }
-                    }
-                        &__footer{
-                            font-size: 20px;
-                        }
                 }
             }
         }
@@ -360,45 +345,6 @@
       }
     }
     .accueil{
-        &__nouvelle{
-            position: relative;
-            width: 100%;
-            height: 592px;
-            &__cartes{
-                margin-top: 60px;
-                .swiper-slide-duplicate-active{
-                    transform: scale(1);
-                    z-index: -10;
-                }
-                .swiper-slide-duplicate-next{
-                    transform: scale(1.1);
-                    z-index: 40;
-                }
-                .carte{
-                    height: 296px;
-                    width: 206px;
-                    &__contraste{
-                    background-color: rgba(0, 0, 0, 0.18);
-                    border-radius: 16px;
-                    }
-                    img{
-                        height: 101px;
-                        width: 100%;
-                    }
-                    &__info{
-                        h4{
-                            font-size: 13px;
-                        }
-                        &__desc{
-                            font-size: 11px;
-                        }
-                    }
-                        &__footer{
-                            font-size: 12px;
-                        }
-                }
-            }
-        }
         &__temoignage{
             height: 370px;
             &__contraste{
@@ -550,9 +496,7 @@
       &--titre{
           font-size: 9px !important;
       }
-      &--fond{
-          height: 900px !important;
-      }
+      
     }
 }
 
