@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title>
@@ -48,14 +49,11 @@
             <ul class="navbar-nav ">
 			<?php 
 			// Affiche un menu si dans le tableau de bord un menu a été défini dans cet emplacement
-			wp_nav_menu( array( 'theme_location' => 'main-menu' ) );
+			wp_nav_menu( array( 'theme_location' => 'main-menu',
+								'container' => 'ul',
+    							'menu_class'=> 'navbar-nav',
+								 ) );
 		?>
-            
-              <li class="nav-item dropdown nav-text">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">FR</a>
-                </ul>
-              </li>
-            </ul>
           </div>
         </div>
       </nav>
