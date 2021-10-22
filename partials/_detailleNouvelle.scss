@@ -1,0 +1,32 @@
+@use 'variables';
+@use 'mixin/text';
+@use 'mixin/titre2';
+
+.nouvelleBackground{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    margin-top: 0%;
+    background-image: url(sources/medias/accueil_arbre_hero.jpg);
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nouvelleTitre{
+    @include titre2.title2;
+    color: variables.$secondaire;
+}
+
+.nouvelleTexte{
+    display: block;
+    position: relative;
+    width: 1000px;
+    height:auto;
+}
+
+.nouvelleImage{
+    width:30%;
+    height:auto;
+}

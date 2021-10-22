@@ -5,6 +5,7 @@
 @use 'partials/footer';
 @use 'partials/mixin/titre1';
 @use 'partials/erreur_404';
+@use 'partials/detailleNouvelle';
 
 *{
     box-sizing: border-box;
