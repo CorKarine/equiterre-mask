@@ -1,4 +1,6 @@
+@use 'variables';
 @use 'mixin/text';
+@use 'mixin/titre2';
 
 .nouvelleBackground{
     display: flex;
@@ -11,6 +13,11 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
+}
+.nouvelleTitre{
+    @include titre2.title2;
+    color: variables.$secondaire;
+    
 }
 
 .nouvelleTexte{
