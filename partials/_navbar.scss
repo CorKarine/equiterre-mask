@@ -37,7 +37,9 @@
         color: white !important;
         padding-left: 0px !important;
         padding-right: 23px !important;
-
+        a{
+            color: inherit;
+        }
         &:hover{
             color: variables.$titleColor !important;
             text-decoration: none !important;
