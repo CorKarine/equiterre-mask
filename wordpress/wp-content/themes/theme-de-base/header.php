@@ -36,12 +36,31 @@
 	<h1>
 		<a href="<?php echo esc_url( home_url( '/' ) ); // Lien vers la page d'accueil ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home"><?php bloginfo( 'name' ); // Affiche le nom du site ?></a>
 	</h1>
-
-	<nav>
-		<?php 
+	<nav class="navbar navbar-dark navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand order-0 order-sm-0" href="index.html"><img src="sources/medias/logo.png" alt="logo"
+              width="172" height="47"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Affichage/masquage de la navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="mainNav" class="collapse navbar-collapse order-1 order-sm-1 ">
+            <ul class="navbar-nav ">
+			<?php 
 			// Affiche un menu si dans le tableau de bord un menu a été défini dans cet emplacement
 			wp_nav_menu( array( 'theme_location' => 'main-menu' ) );
 		?>
+            
+              <li class="nav-item dropdown nav-text">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">FR</a>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+	<nav>
+		
 	</nav>
 
 	<?php 
