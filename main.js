@@ -118,13 +118,54 @@ gsap.timeline({
 
    
     gsap.timeline({
-      defaults:{}
-    })
-      .to ('.don--btn',{
-    scale:1.2,
-    yoyo: true,
-    ease: Power0.easeNone,
-    duration: 0.9,
-    repeat:-1,
-     });
-  
+      defaults:{
+      }
+     })
+       .to ('.don--coeur02',{
+     y:-70,
+     duration: 1.5,
+     ease: "power1.out",
+     repeat : -1,
+     opacity: 0,
+     scale: 0.7
+      }, 1.2)
+     
+    .to ('.don--coeur03',{
+     y:-70,
+     duration: 1.2,
+     ease: "power1.out",
+     repeat : -1,
+     opacity: 0,
+     scale: 0.7
+      }, 1.4)
+   
+     
+    .to ('.don--coeur04',{
+     y:-70,
+     duration: 1.6,
+     ease: "power1.out",
+     repeat : -1,
+     opacity: 0,
+     scale: 0.7
+      }, 1.6)
+   
+    .to ('.don--coeur05',{
+     y:-70,
+     duration: 1.8,
+     ease: "power1.out",
+     repeat : -1,
+     opacity: 0,
+     scale: 0.7
+      }, 1.8)
+   
+   
+   .to ('.don--coeur06',{
+     y:-70,
+     duration: 1.3,
+     ease: "power1.out",
+     repeat : -1,
+     opacity: 0,
+     scale: 0.7
+      }, 2)
+   
+   

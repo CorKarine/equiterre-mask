@@ -429,6 +429,7 @@
    background-size: cover;
    height : 49vw;
    padding-top: 2%;
+   position: relative;
 }
 }
 
@@ -442,8 +443,11 @@
     @include dons.dons;
     position: absolute;
     left: 50%;
+    bottom: 20%;
     transform: translate(-50%, 0);
+    z-index: 21;
 }
+
 
 @media (max-width: 992px){
     .don{
@@ -461,9 +465,12 @@
       &--container{
         margin-top: 50px;
     }
+    &--btn{
+        bottom: 15%;
     }
 
- 
+    }
+  
 }
 
 @media (max-width: 768px){
@@ -490,9 +497,8 @@
           font-size: 9px !important;
       }
       &--fond{
-          height: 471px !important;
+          height: 900px !important;
       }
-      
     }
 }
 
@@ -514,10 +520,14 @@
       &--fond{
           height: 471px !important;
       }
+      &--btn{
+        bottom: 10%;
+    }
       
     }
    
 }
+
 
 @media (max-width: 1300px){
     .don{
@@ -532,8 +542,38 @@
       &--container{
         margin-top: 50px;
     }
+    &--btn{
+        bottom: 10%;
+    }
     }
 }
+
+@media(max-width: 1668px){
+    .don{
+        &--btn{
+            bottom:8%;
+        }
+    }
+    .don--coeurs{
+       position: relative;
+       margin-top: 9%;
+    }
+}
+
+@media (max-width: 1624px){
+    .don--coeurs{
+        position: relative;
+        margin-top: 8%;
+     }
+}
+
+@media (max-width: 1552px){
+    .don--coeurs{
+        position: relative;
+        margin-top: 5%;
+     }
+}
+
 
 /*hr.don--separation{
     border: 3px solid white;
@@ -544,3 +584,54 @@
     top: 10%;
 }
 */
+
+
+.don--coeur02{
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   z-index:20;
+   left: 44%;
+   transform: translate(-44%, 0);
+   bottom: 20%;
+  }
+  
+  .don--coeur03{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 46%;
+    transform: translate(-46%, 0);
+    z-index:20;
+    bottom: 20%;
+  }
+  
+  .don--coeur04{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index:20;
+    left: 49%;
+    transform: translate(-49%, 0);
+    bottom: 20%;
+  }
+  
+  .don--coeur05{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 52%;
+    transform: translate(-52%, 0);
+    z-index:20;
+    bottom: 20%;
+  }
+  
+  .don--coeur06{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index:20;
+    left: 55%;
+    transform: translate(-55%, 0);
+    bottom: 20%;
+  }
