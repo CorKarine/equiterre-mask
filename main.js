@@ -20,21 +20,7 @@ const swiper = new Swiper('.swiper-container',{
         disableOnInteraction: false,
       },
   });
-/*
-  const swiperTemoin = new Swiper('.swiper-temoignage',{ 
-    centeredSlides: true,
-    loop: true,
-    breakpoints: {
-          0 : {
-            slidesPerView: 'auto',
-            spaceBetween: 80,
-          },
-          768 : {
-            slidesPerView: 'auto',
-            spaceBetween: 80,
-          },
-        }
-    });*/
+
 
   let swiperTemoignage;
   let swiperNouvelle;
@@ -50,7 +36,7 @@ const swiper = new Swiper('.swiper-container',{
   const activeSwiper = function(){
     swiperTemoignage = new Swiper('.swiper-temoignage',{ 
       centeredSlides: true,
-      loop:true.valueOf,
+      loop:true,
       breakpoints: {
             0 : {
               slidesPerView: 'auto',
@@ -64,15 +50,15 @@ const swiper = new Swiper('.swiper-container',{
       });
       swiperNouvelle = new Swiper('.swiper-nouvelle',{ 
         centeredSlides: true,
-        loop:true.valueOf,
+        loop:true,
         breakpoints: {
               0 : {
                 slidesPerView: 'auto',
-                spaceBetween: 50,
+                spaceBetween: 20,
               },
               768 : {
                 slidesPerView: 'auto',
-                spaceBetween: 90,
+                spaceBetween: 50,
               },
             }
         });
