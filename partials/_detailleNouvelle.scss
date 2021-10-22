@@ -17,14 +17,13 @@
 .nouvelleTitre{
     @include titre2.title2;
     color: variables.$secondaire;
-    
 }
 
 .nouvelleTexte{
-display: block;
-position: relative;
-width: 1000px;
-height:auto;
+    display: block;
+    position: relative;
+    width: 1000px;
+    height:auto;
 }
 
 .nouvelleImage{
