@@ -1,5 +1,4 @@
 import './node_modules/bootstrap/dist/css/bootstrap.css';
-import bootstrap from 'bootstrap';
 import gsap from "gsap";
 import './main.scss';
 
