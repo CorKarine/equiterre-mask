@@ -63,11 +63,6 @@
 	<nav>
 		
 	</nav>
-
-	<?php 
-		// Affiche la description de site se trouvant dans "General Settings" dans l'admin WordPress
-		bloginfo( 'description' ); 
-	?>
 </header>
 
 <main><!-- Débute le contenu principal de notre site -->

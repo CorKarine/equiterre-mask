@@ -28,7 +28,7 @@
     }
 
     .navbar-toggler-icon {
-        background-image: url(https://flyclipart.com/thumb2/pete-pedro-styling-aid-charts-842796.png);
+        background-image: url(http://localhost/equiterre-mask/wordpress/wp-content/uploads/2021/10/menu.png);
         width: 28px;
         height: 21px;
     }
@@ -56,6 +56,15 @@
         padding: 8px;
         a{
         @include dons.dons;
+        &::before{
+            background-image: url(http://localhost/equiterre-mask/wordpress/wp-content/uploads/2021/10/heart.png);
+            background-size: 14px 13px;
+            display: inline-block;
+            width: 14px;
+            height: 13px;
+            content: "";
+            
+        }
         &:hover{
             text-decoration: none !important;
             color:white !important;
