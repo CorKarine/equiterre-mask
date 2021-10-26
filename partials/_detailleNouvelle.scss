@@ -1,6 +1,6 @@
 @use 'variables';
 @use 'mixin/text';
-@use 'mixin/titre2';
+@use 'mixin/titre1';
 
 .nouvelleBackground{
     display: flex;
@@ -15,18 +15,18 @@
     justify-content: space-evenly;
 }
 .nouvelleTitre{
-    @include titre2.title2;
-    color: variables.$secondaire;
+    @include titre1.title1;
+    color: variables.$titleColor;
 }
 
-.nouvelleTexte{
+/*.nouvelleTexte{
     display: block;
     position: relative;
     width: 1000px;
     height:auto;
-}
+}*/
 
 .nouvelleImage{
-    width:30%;
+    width:20%;
     height:auto;
 }
