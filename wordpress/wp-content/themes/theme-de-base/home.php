@@ -81,7 +81,31 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
           Changer le monde un geste à la fois.
         </div>
       </div>
+    </div>
+	<div class='accueil__services'>
+      <div class='service service--un'>
+        <img class='service--media' src='sources/medias/school.png'>
+        <div class='service--titre'>École ouverte</div>
+        <div class='service--desc'>Équiterre s’est vu confier par le MEES de créer une nouvelle rubrique sur
+          l’alimentation qui s’ajoute en complément du parcours d’exploration éducatif.</div>
+        <a href='###' class='service--bouton'>EN SAVOIR PLUS</a>
+      </div>
 
+      <div class='service service--deux'>
+        <img class='service--media' src='sources/medias/vegetable.png'>
+        <div class='service--titre'>Exigez local</div>
+        <div class='service--desc'> Il n’est pas toujours facile de dénicher les fruits et légumes d’ici.
+          Voici un mode d’emploi pratique afin d’exiger plus d’aliments locaux.</div>
+        <a href='###' class='service--bouton'>EN SAVOIR PLUS</a>
+      </div>
+
+      <div class='service service--trois'>
+        <img class='service--media' src='sources/medias/salad.png'>
+        <div class='service--titre'>Recettes</div>
+        <div class='service--desc'>Vous ne savez pas quoi faire de votre bette à carde? Vous trouverez ici les recettes
+          qui vont mettre en valeur vos paniers de légumes.</div>
+        <a href='###' class='service--bouton'>EN SAVOIR PLUS</a>
+      </div>
     </div>
 	</div> <!--fin du div de l'acceuil-->
 <?php endwhile; // Fermeture de la boucle
