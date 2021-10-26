@@ -22,6 +22,7 @@
 	 Supprimer cette fonction briserait vos extensions et diverses fonctionnalités WordPress. 
 	 Vous pouvez la déplacer si désiré, mais garder là. */
 ?>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body 
@@ -34,12 +35,14 @@
 >
 
 <header>
-	<h1>
-		<a href="<?php echo esc_url( home_url( '/' ) ); // Lien vers la page d'accueil ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home"><?php bloginfo( 'name' ); // Affiche le nom du site ?></a>
-	</h1>
+	<?php 
+  		$logo = get_field('logo');
+  		$url = $logo['url'];
+  		$alt = $logo['alt'];
+	?>
 	<nav class="navbar navbar-dark navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand order-0 order-sm-0" href="index.html"><img src="sources/medias/logo.png" alt="logo"
+          <a class="navbar-brand order-0 order-sm-0" href="<?php echo esc_url( home_url( '/' ) ); // Lien vers la page d'accueil ?>"><img src="<?php echo $url; ?>" class="logo" alt="<?php echo $alt; ?>"
               width="172" height="47"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
             aria-controls="mainNav" aria-expanded="false" aria-label="Affichage/masquage de la navigation">

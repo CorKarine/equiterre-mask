@@ -36,8 +36,7 @@
     .nav-link {
         @include text.text;
         color: white !important;
-        padding-left: 0px ;
-        padding-right: 23px ;
+        padding: 8px;
         a{
             color: inherit;
             text-decoration: none;
@@ -54,6 +53,7 @@
     }
 
     &__btn {
+        padding: 8px;
         a{
         @include dons.dons;
         &:hover{
