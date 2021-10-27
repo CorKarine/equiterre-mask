@@ -32,9 +32,10 @@
 }
 
 .blocNouvelle{
-    color: variables.$terciere;
+    background-color: variables.$terciere;
+    color: variables.$primaire;
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -43,4 +44,19 @@
 }
 .textNouvelle{
     width:70vw;
+}
+.autreNouvelle{
+ display: flex;
+ justify-content: space-evenly;
+}
+.nImage{
+ width:20vw;
+}
+.lienNouvelle{
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: variables.$titleColor;
 }
