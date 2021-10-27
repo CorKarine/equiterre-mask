@@ -43,9 +43,6 @@
             margin-top: 100px;
             width: 100%;
         }
-        .swiper-wrapper{
-            justify-content: space-evenly;
-        }
         &__cartes{
             position: relative;
             .carte{
@@ -88,7 +85,7 @@
                 @include titre3.title3;
                 display: flex;
                 justify-content:space-between;
-                padding: 20px;
+                padding: 50px 20px 0px 20px;
                 a{
                     color: variables.$titleColor;
                 }
@@ -232,6 +229,9 @@
     .accueil__temoignage__cartes{
         justify-content: space-evenly;
     }
+    .accueil__nouvelle__cartes{
+        justify-content: space-evenly;
+    }
 }
 @media (max-width: 992px){
     .accueil__services{
@@ -256,13 +256,13 @@
         &__nouvelle{
             position: relative;
             width: 100%;
-            height: 631px;
+            height: 831px;
             .swiper-nouvelle{
                 margin-top: 50px;
             }
             &__cartes{
                 margin-top: 60px;
-                .swiper-slide-duplicate-active{
+                .swiper-slide-active{
                     transform: scale(1.2);
                     z-index: 30;
                     .carte__contraste{
@@ -270,8 +270,8 @@
                     }
                 }
                 .carte{
-                    height: 385px;
-                    width: 250.83px;
+                    height: 485px;
+                    width: 339.83px;
                     &__contraste{
                     background-color: rgba(0, 0, 0, 0.18);
                     border-radius: 16px;
@@ -366,12 +366,8 @@
             height: 592px;
             &__cartes{
                 margin-top: 60px;
-                .swiper-slide-duplicate-active{
-                    transform: scale(1);
-                    z-index: -10;
-                }
-                .swiper-slide-duplicate-next{
-                    transform: scale(1.1);
+                .swiper-slide-active{
+                    transform: scale(1.3);
                     z-index: 40;
                 }
                 .carte{
@@ -395,6 +391,7 @@
                     }
                         &__footer{
                             font-size: 12px;
+                            padding-top: 30px;
                         }
                 }
             }

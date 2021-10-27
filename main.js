@@ -53,11 +53,11 @@ const swiper = new Swiper('.swiper-container',{
         breakpoints: {
               0 : {
                 slidesPerView: 'auto',
-                spaceBetween: 20,
+                spaceBetween: 50,
               },
               768 : {
                 slidesPerView: 'auto',
-                spaceBetween: 50,
+                spaceBetween: 80,
               },
             }
         });
