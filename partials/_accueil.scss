@@ -438,18 +438,13 @@
     }
 }
 
+
+
 .don{
-   &--fond{
-    width: 100vw;
-    height: 50vw;
-  
-   }
-   
 &--media{
     width: 80px;
     height: 80px;
 }
-
 &--mission{
     @include text.text;
     color: white;
@@ -458,9 +453,7 @@
    margin-top: 10%;
    margin-bottom: 2%;
 }
-&--ligne{
-    height: 20px;
-}
+
 }
 
 .accueil__don{ 
@@ -519,15 +512,15 @@
     &--btn{
         bottom: 15%;
     }
-
+    &--fond{
+        height: 60vw !important;
     }
-  
+    }
 }
 
 @media (max-width: 768px){
     .don{
         grid-template-columns: 1fr 1fr ;
-        
         &--mission{
          font-size: 18px;
          margin-top: 10px !important;
@@ -541,20 +534,44 @@
       }
       &--container{
           margin-top: 10px;
-         display: grid; 
+          display: grid; 
           row-gap: 30px;
       }
       &--titre{
           font-size: 9px !important;
       }
-      
+      &--fond{
+        height: 80vw !important;
     }
+    .don--coeurs{
+       position:relative;
+        margin-bottom: 85px;
+     }
+    }
+   
 }
+
+@media (max-width:668px){
+   .don{
+    &--fond{
+        height: 90vw !important;
+    }
+    
+}
+}
+@media (max-width:584px){
+    .don{
+     &--fond{
+         height: 110vw !important;
+     }
+     
+ }
+ }
 
 @media (max-width: 1000px){
     .don{
         &--mission{
-         font-size: 18px;
+         font-size: 25px;
         }   
         &--media{
          width: 30px;
@@ -566,9 +583,7 @@
       &--titre{
           font-size: 9px !important;
       }
-      &--fond{
-          height: 471px !important;
-      }
+     
       &--btn{
         bottom: 10%;
     }
