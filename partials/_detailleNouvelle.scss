@@ -6,7 +6,7 @@
     display: flex;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     background-size: cover;
     margin-top: 0%;
     background-image: url(sources/medias/accueil_arbre_hero.jpg);
@@ -18,9 +18,16 @@
     @include titre1.title1;
     color: variables.$titleColor;
 }
+.blocPublie{
+    color: variables.$primaire;
+}
 .nouvelleImage{
-    width:20%;
+    width:100%;
     height:auto;
+}
+.categorieNouvelle{
+    color: variables.$primaire;
+    margin-bottom: 5vh; 
 }
 .blocNouvelle{
     background-color: variables.$terciere;
