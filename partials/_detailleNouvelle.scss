@@ -18,19 +18,10 @@
     @include titre1.title1;
     color: variables.$titleColor;
 }
-
-/*.nouvelleTexte{
-    display: block;
-    position: relative;
-    width: 1000px;
-    height:auto;
-}*/
-
 .nouvelleImage{
     width:20%;
     height:auto;
 }
-
 .blocNouvelle{
     background-color: variables.$terciere;
     color: variables.$primaire;
@@ -44,6 +35,8 @@
 }
 .textNouvelle{
     width:70vw;
+    margin-top: 5vh;
+    margin-bottom: -5vh;
 }
 .autreNouvelle{
  display: flex;
@@ -58,5 +51,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    color: variables.$primaire;
+}
+.lienNouvelle:hover{
     color: variables.$titleColor;
 }
