@@ -164,16 +164,16 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
           <a href="https://www.jedonneenligne.org/equiterre/FAIREUNDON/" class="don--link" target="_blank"
             rel="noopener noreferrer">
             <button class='don don--btn'>
-              <div class=" don don--btnTxt"> <img src="assets/heart.png" alt="" style="width:20px;height:20px;"> FAITES UN DON
+              <div class=" don don--btnTxt"> <img src="<?php echo get_template_directory_uri(); ?>/assets/heart.png" alt="" style="width:20px;height:20px;"> FAITES UN DON
                 !</div>
             </button>
           </a>
           <div class='don don--coeurs'>
-            <img src="assets/heart.png" alt="dons" class="don--coeur02" style="width:20px;height:20px;">
-            <img src="assets/heart.png" alt="dons" class="don--coeur03" style="width:20px;height:20px;">
-            <img src="assets/heart.png" alt="dons" class="don--coeur04" style="width:20px;height:20px;">
-            <img src="assets/heart.png" alt="dons" class="don--coeur05" style="width:20px;height:20px;">
-            <img src="assets/heart.png" alt="dons" class="don--coeur06" style="width:20px;height:20px;">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/heart.png" alt="dons" class="don--coeur02" style="width:20px;height:20px;">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/heart.png" alt="dons" class="don--coeur03" style="width:20px;height:20px;">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/heart.png" alt="dons" class="don--coeur04" style="width:20px;height:20px;">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/heart.png" alt="dons" class="don--coeur05" style="width:20px;height:20px;">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/heart.png" alt="dons" class="don--coeur06" style="width:20px;height:20px;">
           </div>
         </div>
         </div>
