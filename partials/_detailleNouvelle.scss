@@ -25,6 +25,17 @@
     width:100%;
     height:auto;
 }
+.nouvelleContraste{
+    background-color: black;
+    opacity: 61%;
+    width: 100%;
+    position: absolute;
+    height: 70vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: inline;
+}
 .categorieNouvelle{
     color: variables.$primaire;
     margin-bottom: 5vh; 
@@ -62,4 +73,37 @@
 }
 .lienNouvelle:hover{
     color: variables.$titleColor;
+}
+.blocTitreNouvelle{
+    z-index: 3;
+}
+.blocImageCategorie{
+    z-index: 3;
+}
+
+@media screen and (max-width: 1199px){
+    .blocNouvelle{height: 200vh;}
+    .autreNouvelle{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .nImage{
+        width:40vw;
+        margin-top: 10vh;
+    
+    }
+    .textNouvelle{
+        margin-bottom: -40vh;
+        margin-top: -10vh;
+    }
+    .lienNouvelle {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+        width:120%;
+    }
+    .lienTitre{
+        margin-top:8vh;
+    }
 }
