@@ -25,6 +25,17 @@
     width:100%;
     height:auto;
 }
+.nouvelleContraste{
+    background-color: black;
+    opacity: 61%;
+    width: 100%;
+    position: absolute;
+    height: 70vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: inline;
+}
 .categorieNouvelle{
     color: variables.$primaire;
     margin-bottom: 5vh; 
@@ -62,4 +73,10 @@
 }
 .lienNouvelle:hover{
     color: variables.$titleColor;
+}
+.blocTitreNouvelle{
+    z-index: 3;
+}
+.blocImageNouvelle{
+    
 }
