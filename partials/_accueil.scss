@@ -86,7 +86,7 @@
                 @include titre3.title3;
                 display: flex;
                 justify-content:space-between;
-                padding: 50px 20px 0px 20px;
+                padding: 0px 20px 0px 20px;
                 a{
                     color: variables.$titleColor;
                 }
@@ -201,7 +201,7 @@
 }
 
 .service{
-    height:329px;
+    height:369px;
     &--media{
         width:63px;
         height:63px;
@@ -469,7 +469,7 @@
     }  
 }
 .don--fond{
-   background-image: url(../sources/medias/bloc_don_eau.JPG);
+   background-image: url(assets/bloc_don_eau.JPG);
    background-repeat: no-repeat;
    background-size: cover;
    height : 49vw;
