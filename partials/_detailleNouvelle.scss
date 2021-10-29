@@ -81,3 +81,18 @@
     z-index: 3;
 }
 
+@media screen and (max-width: 1199px){
+    .blocNouvelle{height: 200vh;}
+    .autreNouvelle{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .nImage{
+        width:40vw;
+        margin-top: 10vh;
+    }
+    .textNouvelle{
+        margin-bottom: -40vh;
+        margin-top: -10vh;
+    }
+}
