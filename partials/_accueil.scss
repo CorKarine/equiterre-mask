@@ -5,6 +5,7 @@
 @use 'mixin/survole';
 @use 'variables';
 @use 'mixin/dons';
+@use "sass:color";
 .accueil{
     overflow-x: hidden;
     text-align: center;
@@ -85,7 +86,7 @@
                 @include titre3.title3;
                 display: flex;
                 justify-content:space-between;
-                padding: 50px 20px 0px 20px;
+                padding: 0px 20px 0px 20px;
                 a{
                     color: variables.$titleColor;
                 }
@@ -200,7 +201,7 @@
 }
 
 .service{
-    height:329px;
+    height:369px;
     &--media{
         width:63px;
         height:63px;
@@ -468,7 +469,7 @@
     }  
 }
 .don--fond{
-   background-image: url(../sources/medias/bloc_don_eau.JPG);
+   background-image: url(assets/bloc_don_eau.JPG);
    background-repeat: no-repeat;
    background-size: cover;
    height : 49vw;
@@ -687,4 +688,70 @@
     left: 55%;
     transform: translate(-55%, 0);
     bottom: 20%;
+  }
+
+  .equipe{
+      justify-content: center;
+    background-color: variables.$terciere; 
+    padding: 32px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, 20%);
+    &--membre{
+        position: relative;
+        margin-top: 22%;
+        background-color: #E1E1DF;
+        padding: 16px;
+        transition: background-color 0.3s;
+        &:hover{
+            background-color: color.adjust(variables.$terciere, $lightness: 50%);
+            cursor: pointer;
+        }
+    }
+    &--img{
+        display: block;
+        width: 100%;
+        margin-bottom: 16px; 
+    }
+    &--nom{
+        @include titre3.title3;
+        color:white;
+    }
+    &--poste{
+        @include text.text;
+    }
+    &--titre{
+        @include titre1.title1;
+        position: absolute;
+        z-index: 20;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    
+  }
+
+
+  @media (max-width:768px){
+      .equipe{
+        grid-template-columns: repeat(1, 1fr);
+            &--titre{
+  font-size: 35px;
+    }
+    &--membre{
+        margin-top: 20% !important;
+    }
+      }
+  
+  }
+
+  @media (max-width:1356px){
+    .equipe{
+            &--titre{
+  font-size: 35px;
+    }
+    &--membre{
+        margin-top: 40%;
+    }
+      }
+  
   }
