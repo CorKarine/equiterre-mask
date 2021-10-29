@@ -90,9 +90,20 @@
     .nImage{
         width:40vw;
         margin-top: 10vh;
+    
     }
     .textNouvelle{
         margin-bottom: -40vh;
         margin-top: -10vh;
+    }
+    .lienNouvelle {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+        width:120%;
+    }
+    .lienTitre{
+        margin-top:8vh;
     }
 }
