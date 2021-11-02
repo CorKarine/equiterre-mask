@@ -8,13 +8,13 @@
 
 <footer class="footer">
       <div class="footer__partenaire">
-        <img src="sources/medias/partenaire_cafeteria.png" alt="partenaire_cafeteria">
-        <img src="sources/medias/partenaire_logo_laval.gif" alt="partenaire_laval">
-        <img src="sources/medias/partenaire_saveur.png" alt="partenaire_saveur">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/medias/partenaire_cafeteria.png" alt="partenaire_cafeteria">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/medias/partenaire_logo_laval.gif" alt="partenaire_laval">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/medias/partenaire_saveur.png" alt="partenaire_saveur">
       </div>
       <div class="footer__information">
         <div class='footer__information__media'>
-          <a href="index.html"><img src="sources/medias/logo.png" alt="logo" width="142" height="38"></a>
+          <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/medias/logo.png" alt="logo" width="142" height="38"></a>
           <p>© 2021 Équiterre, MASK</p>
           <div class="footer__information__resaux"></div>
           <a href="https://www.facebook.com/equiterre/" target="_blank" rel="noopener noreferrer"><img

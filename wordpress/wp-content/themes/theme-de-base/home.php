@@ -134,22 +134,22 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
       <div class="don don--fond">
         <div class="don don--container">
           <div class="don don--un">
-            <img class="don--media" src='assets/solidarity.png'>
+            <img class="don--media" src='<?php echo get_template_directory_uri(); ?>/assets/solidarity.png'>
             <div class='don--valeur'>130 000</div>
             <div class='don--titre'>SYMPATHISANTS</div>
           </div>
           <div class="don don--deux">
-            <img class="don--media" src='assets/donate.png'>
+            <img class="don--media" src='<?php echo get_template_directory_uri(); ?>/assets/donate.png'>
             <div class='don--valeur'>18 000</div>
             <div class='don--titre'>DONATEURS</div>
           </div>
           <div class="don don--trois">
-            <img class="don--media" src='assets/calendar.png'>
+            <img class="don--media" src='<?php echo get_template_directory_uri(); ?>/assets/calendar.png'>
             <div class='don--valeur'>26 ANS</div>
             <div class='don--titre'>DEPUIS LA FONDATION</div>
           </div>
           <div class="don don--quatre">
-            <img class="don--media" src='assets/office-building.png'>
+            <img class="don--media" src='<?php echo get_template_directory_uri(); ?>/assets/office-building.png'>
             <div class='don--valeur'>3 BUREAUX</div>
             <div class='don--titre'>MONTRÉAL, QUÉBEC & OTTAWA</div>
           </div>
