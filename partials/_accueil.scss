@@ -735,7 +735,7 @@
       .equipe{
         grid-template-columns: repeat(1, 1fr);
             &--titre{
-  font-size: 35px;
+  font-size: 30px !important;
     }
     &--membre{
         margin-top: 20% !important;
