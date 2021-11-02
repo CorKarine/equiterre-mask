@@ -692,7 +692,7 @@
 
   .equipe{
     justify-content: center;
-    background-color: variables.$terciere; 
+    background-color: variables.$primaire; 
     padding: 32px;
     display: grid;
     column-gap: 60px;
@@ -700,7 +700,7 @@
     &--membre{
         position: relative;
         margin-top: 22%;
-        background-color: #E1E1DF;
+        background-color: white;
         padding: 16px;
         transition: background-color 0.3s;
         &:hover{
@@ -715,7 +715,7 @@
     }
     &--nom{
         @include titre3.title3;
-        color:white;
+        color:variables.$titleColor;
     }
     &--poste{
         @include text.text;
