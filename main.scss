@@ -6,9 +6,14 @@
 @use 'partials/mixin/titre1';
 @use 'partials/erreur_404';
 @use 'partials/detailleNouvelle';
+@use 'partials/headerGeneral';
 
 *{
     box-sizing: border-box;
+  }
+  html,
+  body {
+    margin: 0;
   }
   .navbarOpen{
     background-color: rgba(0, 0, 0, 0.733);

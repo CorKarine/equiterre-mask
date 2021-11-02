@@ -108,7 +108,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
       <div class="swiper-nouvelle">
         <div class="accueil__nouvelle__cartes swiper-wrapper">
         <?php
-  $nouvelle = new WP_Query( array('orderby' => 'date','order'   => 'ASC' ,'posts_per_page' => 3) ); // 👈 Utilisation
+  $nouvelle = new WP_Query( array('orderby' => 'date','order'   => 'DESC' ,'posts_per_page' => 3) ); // 👈 Utilisation
   while ($nouvelle->have_posts()) : $nouvelle->the_post(); 
 ?>
           <div class="carte carte--1 swiper-slide">
@@ -119,8 +119,8 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
               <div class='carte__info__desc'> <?php $content = get_the_content(); echo mb_strimwidth($content, 0, 90, '...');?></div>
             </div>
             <div class="carte__footer">
-              <p class="carte__footer__date">21-08-29</p>
-              <a href="###">Lire plus</a>
+              <p class="carte__footer__date"><?php echo get_the_date("Y-m-d"); ?></p>
+              <a href="<?php the_permalink(); ?>">Lire plus</a>
             </div>
           </div>
           <?php
@@ -134,22 +134,22 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
       <div class="don don--fond">
         <div class="don don--container">
           <div class="don don--un">
-            <img class="don--media" src='assets/solidarity.png'>
+            <img class="don--media" src='<?php echo get_template_directory_uri(); ?>/assets/solidarity.png'>
             <div class='don--valeur'>130 000</div>
             <div class='don--titre'>SYMPATHISANTS</div>
           </div>
           <div class="don don--deux">
-            <img class="don--media" src='assets/donate.png'>
+            <img class="don--media" src='<?php echo get_template_directory_uri(); ?>/assets/donate.png'>
             <div class='don--valeur'>18 000</div>
             <div class='don--titre'>DONATEURS</div>
           </div>
           <div class="don don--trois">
-            <img class="don--media" src='assets/calendar.png'>
+            <img class="don--media" src='<?php echo get_template_directory_uri(); ?>/assets/calendar.png'>
             <div class='don--valeur'>26 ANS</div>
             <div class='don--titre'>DEPUIS LA FONDATION</div>
           </div>
           <div class="don don--quatre">
-            <img class="don--media" src='assets/office-building.png'>
+            <img class="don--media" src='<?php echo get_template_directory_uri(); ?>/assets/office-building.png'>
             <div class='don--valeur'>3 BUREAUX</div>
             <div class='don--titre'>MONTRÉAL, QUÉBEC & OTTAWA</div>
           </div>
@@ -178,6 +178,21 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
         </div>
         </div>
         </div>
+        <div class="accueil__temoignage">
+      <div class="accueil__temoignage__titre">Témoignages</div>
+      <div class='swiper-temoignage'>
+        <div class="accueil__temoignage__cartes swiper-wrapper">
+          <div class="temoignage temoignage--1 swiper-slide">
+            <div class='temoignage--media'><img src="sources/medias/temoin_03.jpg" alt="temoin_03"></div>
+            <div class='temoignage--nom'>STACY M.</div>
+            <div class='temoignage--ville'>Québec, Canada</div>
+            <div class='temoignage--desc'>"Donec mauris nisi, rutrum in elit nec, consectetur iaculis neque. Vivamus sed
+              nisi ut eros."</div>
+          </div>
+        </div>
+      </div>
+      <div class="accueil__temoignage__contraste"></div>
+    </div>
 	</div> <!--fin du div de l'acceuil-->
 <?php endwhile; // Fermeture de la boucle
 

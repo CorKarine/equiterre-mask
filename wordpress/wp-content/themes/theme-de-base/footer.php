@@ -8,29 +8,36 @@
 
 <footer class="footer">
       <div class="footer__partenaire">
-        <img src="sources/medias/partenaire_cafeteria.png" alt="partenaire_cafeteria">
-        <img src="sources/medias/partenaire_logo_laval.gif" alt="partenaire_laval">
-        <img src="sources/medias/partenaire_saveur.png" alt="partenaire_saveur">
+      <?php
+  $partenaire = new WP_Query('post_type=partenaire');
+  while ($partenaire->have_posts()) : $partenaire->the_post();
+?>
+        <a href="<?php the_field('lien'); ?>" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_the_post_thumbnail_url();?>" alt=""></a>
+        <?php
+  endwhile; 
+  wp_reset_postdata(); 
+?>
       </div>
       <div class="footer__information">
         <div class='footer__information__media'>
-          <a href="index.html"><img src="sources/medias/logo.png" alt="logo" width="142" height="38"></a>
+  <a href="<?php echo esc_url( home_url( '/' ) );?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" class="logo" alt="<?php echo $alt; ?>"
+  width="142" height="38"></a>
           <p>© 2021 Équiterre, MASK</p>
           <div class="footer__information__resaux"></div>
           <a href="https://www.facebook.com/equiterre/" target="_blank" rel="noopener noreferrer"><img
-              src="assets/facebook.png" alt="facebook" class='footer__information__media--sociaux'></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/facebook.png" alt="facebook" class='footer__information__media--sociaux'></a>
           <a href="https://www.youtube.com/user/equiterreONG" target="_blank" rel="noopener noreferrer"><img
-              src="assets/youtube.png" alt="youtube" class='footer__information__media--sociaux'></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/youtube.png" alt="youtube" class='footer__information__media--sociaux'></a>
           <a href="https://www.linkedin.com/company/equiterre" target="_blank" rel="noopener noreferrer"><img
-              src="assets/linkedin.png" alt="linkedin" class='footer__information__media--sociaux'></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/linkedin.png" alt="linkedin" class='footer__information__media--sociaux'></a>
           <a href="https://www.instagram.com/equiterre_ong/" target="_blank" rel="noopener noreferrer"><img
-              src="assets/twitter.png" alt="twitter" class='footer__information__media--sociaux'></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/twitter.png" alt="twitter" class='footer__information__media--sociaux'></a>
         </div>
         <div class='footer__information__contact'>
           <h4>Donation</h4>
           <a href="https://www.jedonneenligne.org/equiterre/FAIREUNDON/" target="_blank" rel="noopener noreferrer">
             <button class='footer__information__contact__btn'>
-              <img src="assets/heart.png" alt="dons" class="heart"> FAITES UN DON !
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/heart.png" alt="dons" class="heart"> FAITES UN DON !
             </button>
           </a>
           <h4>adresse</h4>

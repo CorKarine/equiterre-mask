@@ -35,14 +35,9 @@
 >
 
 <header>
-	<?php 
-  		$logo = get_field('logo');
-  		$url = $logo['url'];
-  		$alt = $logo['alt'];
-	?>
 	<nav class="navbar navbar-dark navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand order-0 order-sm-0" href="<?php echo esc_url( home_url( '/' ) ); // Lien vers la page d'accueil ?>"><img src="<?php echo $url; ?>" class="logo" alt="<?php echo $alt; ?>"
+          <a class="navbar-brand order-0 order-sm-0" href="<?php echo esc_url( home_url( '/' ) ); // Lien vers la page d'accueil ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" class="logo" alt="<?php echo $alt; ?>"
               width="172" height="47"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
             aria-controls="mainNav" aria-expanded="false" aria-label="Affichage/masquage de la navigation">
