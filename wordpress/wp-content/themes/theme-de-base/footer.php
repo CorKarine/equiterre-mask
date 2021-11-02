@@ -18,19 +18,19 @@
           <p>© 2021 Équiterre, MASK</p>
           <div class="footer__information__resaux"></div>
           <a href="https://www.facebook.com/equiterre/" target="_blank" rel="noopener noreferrer"><img
-              src="assets/facebook.png" alt="facebook" class='footer__information__media--sociaux'></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/facebook.png" alt="facebook" class='footer__information__media--sociaux'></a>
           <a href="https://www.youtube.com/user/equiterreONG" target="_blank" rel="noopener noreferrer"><img
-              src="assets/youtube.png" alt="youtube" class='footer__information__media--sociaux'></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/youtube.png" alt="youtube" class='footer__information__media--sociaux'></a>
           <a href="https://www.linkedin.com/company/equiterre" target="_blank" rel="noopener noreferrer"><img
-              src="assets/linkedin.png" alt="linkedin" class='footer__information__media--sociaux'></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/linkedin.png" alt="linkedin" class='footer__information__media--sociaux'></a>
           <a href="https://www.instagram.com/equiterre_ong/" target="_blank" rel="noopener noreferrer"><img
-              src="assets/twitter.png" alt="twitter" class='footer__information__media--sociaux'></a>
+              src="<?php echo get_template_directory_uri(); ?>/assets/twitter.png" alt="twitter" class='footer__information__media--sociaux'></a>
         </div>
         <div class='footer__information__contact'>
           <h4>Donation</h4>
           <a href="https://www.jedonneenligne.org/equiterre/FAIREUNDON/" target="_blank" rel="noopener noreferrer">
             <button class='footer__information__contact__btn'>
-              <img src="assets/heart.png" alt="dons" class="heart"> FAITES UN DON !
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/heart.png" alt="dons" class="heart"> FAITES UN DON !
             </button>
           </a>
           <h4>adresse</h4>
