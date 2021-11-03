@@ -34,6 +34,10 @@
               src="<?php echo get_template_directory_uri(); ?>/assets/twitter.png" alt="twitter" class='footer__information__media--sociaux'></a>
         </div>
         <div class='footer__information__contact'>
+        <?php
+  $footer = new WP_Query( array( 'post_type' => 'footer', 'meta_value' => '418 522-0006' ) ); // 👈 Utilisation
+  while ($footer->have_posts()) : $footer->the_post(); 
+?>
           <h4><?php the_field('titre_don'); ?></h4>
           <a href="https://www.jedonneenligne.org/equiterre/FAIREUNDON/" target="_blank" rel="noopener noreferrer">
             <button class='footer__information__contact__btn'>
@@ -51,6 +55,10 @@
           <h4><?php the_field('courriel_titre'); ?></h4>
           <p><?php the_field('courriel_info'); ?></p>
         </div>
+        <?php
+  endwhile; 
+  wp_reset_postdata(); 
+?>
         <div class="footer__information__separator"></div>
       </div>
     </footer>
