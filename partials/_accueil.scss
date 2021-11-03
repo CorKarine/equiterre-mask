@@ -7,7 +7,7 @@
 @use 'mixin/dons';
 @use "sass:color";
 .accueil{
-    overflow-x: hidden;
+    overflow: hidden;
     text-align: center;
     position: relative;
     h1 {

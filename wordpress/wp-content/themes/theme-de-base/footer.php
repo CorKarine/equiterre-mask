@@ -34,21 +34,22 @@
               src="<?php echo get_template_directory_uri(); ?>/assets/twitter.png" alt="twitter" class='footer__information__media--sociaux'></a>
         </div>
         <div class='footer__information__contact'>
-          <h4>Donation</h4>
+          <h4><?php the_field('titre_don'); ?></h4>
           <a href="https://www.jedonneenligne.org/equiterre/FAIREUNDON/" target="_blank" rel="noopener noreferrer">
             <button class='footer__information__contact__btn'>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/heart.png" alt="dons" class="heart"> FAITES UN DON !
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/heart.png" alt="dons" class="heart"> <?php the_field('don_bouton'); ?>
             </button>
           </a>
-          <h4>adresse</h4>
+          <h4><?php the_field('adresse_titre'); ?></h4>
           <a href="https://goo.gl/maps/srKKR8urMHB1yJT77" target="_blank" rel="noopener noreferrer">
-            <p>870, avenue de Salaberry, bureau 226 <br>
-              Québec (Québec) G1R 2T9</p>
+            <p>
+            <?php the_field('adresse_info'); ?>
+          </p>
           </a>
-          <h4>téléphone</h4>
-          <p>418 522-0006</p>
-          <h4>courriel</h4>
-          <p>info@equiterre.org</p>
+          <h4><?php the_field('telephone_titre'); ?></h4>
+          <p><?php the_field('telephone_info'); ?></p>
+          <h4><?php the_field('courriel_titre'); ?></h4>
+          <p><?php the_field('courriel_info'); ?></p>
         </div>
         <div class="footer__information__separator"></div>
       </div>

@@ -1,5 +1,3 @@
-import './node_modules/bootstrap/dist/css/bootstrap.css';
-//import gsap from "gsap";
 import './main.scss';
 
 const breakpoint = window.matchMedia( '(min-width:992px)' );

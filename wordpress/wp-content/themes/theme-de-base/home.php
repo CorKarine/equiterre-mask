@@ -75,10 +75,10 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
       </div>
       <div class='accueil__header__texte'>
         <div class='accueil__header__titre'>
-          Équiterre
+        <?php the_content(); ?>
         </div>
         <div class='accueil__header__sousTitre'>
-          Changer le monde un geste à la fois.
+        <?php the_field('phrase_sous_titre'); ?>
         </div>
       </div>
     </div>
@@ -104,7 +104,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 ?>
     </div>
     <div class="accueil__nouvelle">
-      <div class="accueil__nouvelle__titre"> NOUVELLES RÉCENTES</div>
+      <div class="accueil__nouvelle__titre"> <?php the_field('titre_section_nouvelle'); ?></div>
       <div class="swiper-nouvelle">
         <div class="accueil__nouvelle__cartes swiper-wrapper">
         <?php
@@ -135,30 +135,27 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
         <div class="don don--container">
           <div class="don don--un">
             <img class="don--media" src='<?php echo get_template_directory_uri(); ?>/assets/solidarity.png'>
-            <div class='don--valeur'>130 000</div>
-            <div class='don--titre'>SYMPATHISANTS</div>
+            <div class='don--valeur'><?php the_field('sympathisant_nombre'); ?></div>
+            <div class='don--titre'><?php the_field('sympathisant_titre'); ?></div>
           </div>
           <div class="don don--deux">
             <img class="don--media" src='<?php echo get_template_directory_uri(); ?>/assets/donate.png'>
-            <div class='don--valeur'>18 000</div>
-            <div class='don--titre'>DONATEURS</div>
+            <div class='don--valeur'><?php the_field('donateur_nombre'); ?></div>
+            <div class='don--titre'><?php the_field('donateur_titre'); ?></div>
           </div>
           <div class="don don--trois">
             <img class="don--media" src='<?php echo get_template_directory_uri(); ?>/assets/calendar.png'>
-            <div class='don--valeur'>26 ANS</div>
-            <div class='don--titre'>DEPUIS LA FONDATION</div>
+            <div class='don--valeur'><?php the_field('fondation_nombre'); ?></div>
+            <div class='don--titre'><?php the_field('fondation_titre'); ?></div>
           </div>
           <div class="don don--quatre">
             <img class="don--media" src='<?php echo get_template_directory_uri(); ?>/assets/office-building.png'>
-            <div class='don--valeur'>3 BUREAUX</div>
-            <div class='don--titre'>MONTRÉAL, QUÉBEC & OTTAWA</div>
+            <div class='don--valeur'><?php the_field('bureau_nombre'); ?></div>
+            <div class='don--titre'><?php the_field('bureau_titre'); ?></div>
           </div>
         </div>
         <div class="don don--mission">
-          Équiterre travaille à rendre<br>
-          tangibles, accessibles et inspirantes<br>
-          les transitions vers une société<br>
-          écologique et juste.
+        <?php the_field('don_mission'); ?>
         </div>
         <div class='don don--animation'>
           <a href="https://www.jedonneenligne.org/equiterre/FAIREUNDON/" class="don--link" target="_blank"
@@ -179,19 +176,26 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
         </div>
         </div>
         <div class="accueil__temoignage">
-      <div class="accueil__temoignage__titre">Témoignages</div>
+      <div class="accueil__temoignage__contraste"></div>
+      <div class="accueil__temoignage__titre"><?php the_field('titre_section_temoignage'); ?></div>
       <div class='swiper-temoignage'>
         <div class="accueil__temoignage__cartes swiper-wrapper">
-          <div class="temoignage temoignage--1 swiper-slide">
-            <div class='temoignage--media'><img src="sources/medias/temoin_03.jpg" alt="temoin_03"></div>
-            <div class='temoignage--nom'>STACY M.</div>
-            <div class='temoignage--ville'>Québec, Canada</div>
-            <div class='temoignage--desc'>"Donec mauris nisi, rutrum in elit nec, consectetur iaculis neque. Vivamus sed
-              nisi ut eros."</div>
+        <?php
+  $temoignage = new WP_Query('post_type=temoignage');
+  while ($temoignage->have_posts()) : $temoignage->the_post();
+?>
+          <div class="temoignage temoignage--<?php the_field('indextemoin'); ?> swiper-slide">
+            <div class='temoignage--media'><img src="<?php echo get_the_post_thumbnail_url();?>" alt="temoin_03"></div>
+            <div class='temoignage--nom'><?php the_title(); ?></div>
+            <div class='temoignage--ville'><?php the_field('ville'); ?></div>
+            <div class='temoignage--desc'><?php the_content(); ?></div>
           </div>
+          <?php
+  endwhile; 
+  wp_reset_postdata(); 
+?>
         </div>
       </div>
-      <div class="accueil__temoignage__contraste"></div>
     </div>
 	</div> <!--fin du div de l'acceuil-->
 <?php endwhile; // Fermeture de la boucle
