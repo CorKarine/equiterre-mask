@@ -545,7 +545,7 @@
     }
     .don--coeurs{
        position:relative;
-        margin-bottom: 85px;
+        margin-bottom: 85px !important;
      }
     }
    
@@ -638,6 +638,15 @@
      }
 }
 
+
+@media (max-width: 435px){
+    .don{
+        &--fond{
+            height: 160vw !important;
+        }
+        
+    }
+}
 
 .don--coeur02{
    position: absolute;
