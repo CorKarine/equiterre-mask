@@ -49,9 +49,7 @@
   @media (max-width:768px){
       .equipe{
         grid-template-columns: repeat(1, 1fr);
-            &--titre{
-  font-size: 30px !important;
-    }
+      
     &--membre{
         margin-top: 20% !important;
     }
@@ -73,9 +71,23 @@
 
   .modal-header{
       border-bottom: none;
+      background-color: variables.$titleColor; 
   }
 
   .modal-title{
-      color:variables.$titleColor;
+      color:white;
   }
+
+.modal-body{
+    @include text.text;
+}
+
+
+@media(max-width: 500px){
+    .equipe{
+        &--titre{
+            font-size: 25px !important;
+        }
+    }
+}
 
