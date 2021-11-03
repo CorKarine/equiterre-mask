@@ -151,4 +151,8 @@ gsap.timeline({
      scale: 0.7
       }, 2)
    
-   
+      $(document).ready(function(){
+        $('#membreColleen').click(function(){
+            $('#modalColleen').modal('show')
+        });
+      });
