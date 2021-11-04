@@ -1,5 +1,8 @@
 {
     "post_types": {
-      "service": {}
+      "service": {},
+      "footer": {},
+      "temoignage": {},
+      "equipe": {}
     }
   }

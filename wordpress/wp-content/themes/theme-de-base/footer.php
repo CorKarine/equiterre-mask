@@ -35,7 +35,7 @@
         </div>
         <div class='footer__information__contact'>
         <?php
-  $footer = new WP_Query( array( 'post_type' => 'footer', 'meta_value' => '418 522-0006' ) ); // 👈 Utilisation
+  $footer = new WP_Query( array( 'post_type' => 'footer', 'meta_value' => 'Footer' ) ); // 👈 Utilisation
   while ($footer->have_posts()) : $footer->the_post(); 
 ?>
           <h4><?php the_field('titre_don'); ?></h4>
@@ -45,7 +45,7 @@
             </button>
           </a>
           <h4><?php the_field('adresse_titre'); ?></h4>
-          <a href="https://goo.gl/maps/srKKR8urMHB1yJT77" target="_blank" rel="noopener noreferrer">
+          <a href="https://goo.gl/maps/5eo3uGPUkhAeLnLY9" target="_blank" rel="noopener noreferrer">
             <p>
             <?php the_field('adresse_info'); ?>
           </p>
