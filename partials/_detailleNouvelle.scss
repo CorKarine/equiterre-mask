@@ -108,6 +108,10 @@
     .lienTitre{
         margin-top:8vh;
     }
+    .nouvelleBackground{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
 }
 @media screen and (max-width: 375px){
     .blocNouvelle{height: 200vh;}
@@ -136,5 +140,10 @@
     .lienTitre{
         margin-top:0vh;
     }
+    .nouvelleBackground{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
 }
 
