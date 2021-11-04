@@ -22,7 +22,7 @@
     color: variables.$primaire;
 }
 .nouvelleImage{
-    width:100%;
+    width:30vw;
     height:auto;
 }
 .nouvelleContraste{
@@ -112,6 +112,10 @@
         flex-wrap: wrap;
         flex-direction: column;
     }
+    .nouvelleImage{
+        width:50vw;
+        height:auto;
+    }
 }
 @media screen and (max-width: 375px){
     .blocNouvelle{height: 200vh;}
@@ -143,6 +147,10 @@
     .nouvelleBackground{
         flex-wrap: wrap;
         flex-direction: column;
+    }
+    .nouvelleImage{
+        width:100vw;
+        height:auto;
     }
 
 }
