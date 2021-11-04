@@ -16,7 +16,8 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 		
 		<?php endif; ?>
 		
-		<?php the_content(); // Contenu principal de la page ?>
+		<div class="hubNouvelle">
+  		</div>
 <?php endwhile; // Fermeture de la boucle
 
 else : // Si aucune page n'a été trouvée
