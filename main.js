@@ -151,4 +151,42 @@ gsap.timeline({
      scale: 0.7
       }, 2)
    
-   
+      fetch('https://equiterre.qc.lu/wp-json/wp/v2/posts?_embed')
+      .then(response => response.json())
+      .then(data => {
+          
+          let html = "";
+          let preview = document.querySelector('.hubNouvelle');
+        for (let i=0; i<6;i++){
+          if(i>0){
+            html += `<a href="${data[i].link}">
+            <div class="hubNouvelle__cartes">
+              <div class="hubNouvelle__cartes__img">
+              <img src="${data[i]._embedded['wp:featuredmedia'][0].source_url}">
+              </div>
+              <div class="hubNouvelle__cartes__info">
+              <h3 class="cartes--titre">${data[i].title.rendered}</h3>
+              <div class="cartes--desc">
+              ${data[i].excerpt.rendered}
+              </div>
+              </div>
+            </div>
+            </a>`;
+          preview.innerHTML = html;
+          } if(i==0){
+            html += `<a href="${data[i].link}">
+            <div class="hubNouvelle__cartes hubNouvelle__cartes--first">
+              <div class="hubNouvelle__cartes__img">
+              <img src="${data[i]._embedded['wp:featuredmedia'][0].source_url}">
+              </div>
+              <div class="hubNouvelle__cartes__info">
+              <h3 class="cartes--titre">${data[i].title.rendered}</h3>
+              <div class="cartes--desc">
+              ${data[i].excerpt.rendered}
+              </div>
+              </div>
+            </div>
+            </a>`; 
+          }
+        } 
+      });

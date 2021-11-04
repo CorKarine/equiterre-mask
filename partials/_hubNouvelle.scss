@@ -1,0 +1,76 @@
+@use 'mixin/titre3';
+@use 'mixin/text';
+@use 'variables';
+@use "sass:color";
+
+  .hubNouvelle{
+    background-color: variables.$primaire;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    text-align:left;
+    position:relative;
+    width: 100%;
+    padding:32px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+  &__cartes{
+    padding:16px;
+    background-color: #fff;
+    margin-bottom:40px;
+    width: 100%;
+    height: auto;
+    display:grid;
+    gap:16px;
+    grid-template-columns: 45% 1fr;
+    grid-template-rows: 1fr;
+    &:hover{
+        background-color: color.adjust(variables.$terciere, $lightness: 50%);
+        cursor: pointer;
+    }
+    &--first{
+        background-color: variables.$terciere;
+      color:white;
+      &:hover{
+        background-color: color.adjust(variables.$terciere, $lightness: -10%);
+        cursor: pointer;
+    }
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+      
+    }
+    &__info{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .cartes{
+      &--titre{
+        @include titre3.title3;
+      }
+      &--desc{
+        @include text.text;
+      }
+    }
+  }
+  }
+  @media (max-width: 768px){
+    .hubNouvelle{
+      &__cartes{
+        grid-template-rows: 45% 1fr;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  @media (max-width: 462px){
+    .hubNouvelle{
+      &__cartes{
+        height: 700px;
+      }
+    }
+  }
