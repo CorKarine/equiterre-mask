@@ -1,0 +1,93 @@
+@use 'mixin/titre1';
+@use 'mixin/titre2';
+@use 'mixin/titre3';
+@use 'mixin/text';
+@use 'variables';
+@use "sass:color";
+
+.equipe{
+    justify-content: space-between;
+    background-color: variables.$primaire; 
+    padding: 32px;
+    display: grid;
+    column-gap: 60px;
+    grid-template-columns: repeat(3, 25%);
+    &--membre{
+        position: relative;
+        margin-top: 22%;
+        background-color: white;
+        padding: 16px;
+        transition: background-color 0.3s;
+        &:hover{
+            background-color: color.adjust(variables.$terciere, $lightness: 50%);
+            cursor: pointer;
+        }
+    }
+    &--img{
+        display: block;
+        width: 100%;
+        margin-bottom: 16px; 
+    }
+    &--nom{
+        @include titre3.title3;
+        color:variables.$titleColor;
+    }
+    &--poste{
+        @include text.text;
+    }
+    &--titre{
+        @include titre1.title1;
+        position: absolute;
+        z-index: 20;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    
+  }
+
+
+  @media (max-width:768px){
+      .equipe{
+        grid-template-columns: repeat(1, 1fr);
+      
+    &--membre{
+        margin-top: 20% !important;
+    }
+      }
+  
+  }
+
+  @media (max-width:1356px){
+    .equipe{
+            &--titre{
+  font-size: 35px;
+    }
+    &--membre{
+        margin-top: 40%;
+    }
+      }
+  
+  }
+
+  .modal-header{
+      border-bottom: none;
+      background-color: variables.$titleColor; 
+  }
+
+  .modal-title{
+      color:white;
+  }
+
+.modal-body{
+    @include text.text;
+}
+
+
+@media(max-width: 500px){
+    .equipe{
+        &--titre{
+            font-size: 25px !important;
+        }
+    }
+}
+

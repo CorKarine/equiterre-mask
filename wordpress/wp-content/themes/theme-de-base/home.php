@@ -129,6 +129,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 ?>
         </div>
       </div>
+</div>
     </div>
     <div class="accueil__don">
       <div class="don don--fond">
@@ -196,7 +197,6 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 ?>
         </div>
       </div>
-    </div>
 	</div> <!--fin du div de l'acceuil-->
 <?php endwhile; // Fermeture de la boucle
 

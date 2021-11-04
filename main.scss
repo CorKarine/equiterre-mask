@@ -7,6 +7,8 @@
 @use 'partials/erreur_404';
 @use 'partials/detailleNouvelle';
 @use 'partials/headerGeneral';
+@use 'partials/equipe';
+@use 'partials/hubNouvelle';
 
 *{
     box-sizing: border-box;
