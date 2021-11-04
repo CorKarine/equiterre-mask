@@ -1,6 +1,7 @@
 <?php 
 /**
- * 	Template Name: Nouvelles
+ * 	Template Name: Nouvelle
+ *  Template Post Type: post, page,
  * 	Identique à page, mais avec une barre latérale
  */
 
@@ -11,12 +12,9 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 	while ( have_posts() ) : the_post(); 
 ?>
 		<?php if (!is_front_page()) : // Si nous ne sommes PAS sur la page d'accueil ?>
-			
-				<?php get_template_part( 'partials/headerGeneral' ); // Affiche partials/404.php ?>
-		
+
 		<?php endif; ?>
-		
-		<?php the_content(); // Contenu principal de la page ?>
+		<!--met ton code ici-->
 <?php endwhile; // Fermeture de la boucle
 
 else : // Si aucune page n'a été trouvée
