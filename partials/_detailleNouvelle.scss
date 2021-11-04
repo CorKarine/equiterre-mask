@@ -109,3 +109,32 @@
         margin-top:8vh;
     }
 }
+@media screen and (max-width: 375px){
+    .blocNouvelle{height: 200vh;}
+    .autreNouvelle{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .nImage{
+        width:40vw;
+        margin-top: 0vh;
+    
+    }
+    .textNouvelle{
+        margin-bottom: -7vh;
+        margin-top: 10vh;
+    }
+    .lienNouvelle {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+        width:100vw;
+        margin-top:2vh;
+        
+    }
+    .lienTitre{
+        margin-top:0vh;
+    }
+}
+
