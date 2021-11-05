@@ -90,7 +90,11 @@ gsap.timeline({
     { x: '77vw'})
   .to('.plant',
     { rotateY: '180'})
-    .to('.erreur',
+  .to('.water',
+    { y: '60vh'})
+  .to ('.water',
+    {opacity:'0%'})
+  .to('.erreur',
     { color:'#041C04'})
   .to('.plant',
     { x: '5vw'})
