@@ -3,8 +3,7 @@
 @use 'variables';
 @use "sass:color";
 
-  .hubNouvelle{
-    display: block;
+  .hubService{
     background-color: variables.$primaire;
     display:flex;
     flex-wrap:wrap;
@@ -17,8 +16,7 @@
         text-decoration: none;
         color: black;
     }
-  &__cartes{
-    display: block;
+  &__carte{
     padding:16px;
     background-color: #fff;
     margin-bottom:40px;
@@ -51,7 +49,7 @@
       align-items:center;
       flex-wrap:wrap;
     }
-    .cartes{
+    .carte{
       &--titre{
         @include titre3.title3;
       }
@@ -62,16 +60,16 @@
   }
   }
   @media (max-width: 768px){
-    .hubNouvelle{
-      &__cartes{
+    .hubService{
+      &__carte{
         grid-template-rows: 45% 1fr;
         grid-template-columns: 1fr;
       }
     }
   }
   @media (max-width: 462px){
-    .hubNouvelle{
-      &__cartes{
+    .hubService{
+      &__carte{
         height: 700px;
       }
     }
