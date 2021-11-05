@@ -73,6 +73,9 @@
  width:20vw;
  
 }
+a{
+    text-decoration:none;
+}
 .lienNouvelle{
     background-color: white;
     padding: 10px;
@@ -82,10 +85,7 @@
     color: black;
     justify-content: center;
     text-decoration-line:none !important;
-    &a{
-        text-decoration: none !important;
-        text-decoration-line:none !important;
-    }
+    
     &h2{
         text-decoration: none !important;
     }
