@@ -25,7 +25,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
   while ($equipe->have_posts()) : $equipe->the_post();
 ?>
  <div class="equipe--membre"  data-bs-toggle="modal" data-bs-target="#modal--<?php the_title(); ?>" id="membre--<?php the_title(); ?>">
-      <img class="equipe--img" src="https://pm1.narvii.com/6941/cb1212ac9645cb3a4b75b3e356c1b18369e972ebr1-1365-2048v2_hq.jpg" alt="Daily Mix 5">
+      <img class="equipe--img" src="<?php echo get_the_post_thumbnail_url();?>" alt="membre">
       <h2 class="equipe--nom"><?php the_title(); ?></h2>
       <div class="equipe--poste"><?php the_field('poste'); ?></div>
     </div>
