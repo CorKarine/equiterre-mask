@@ -15,7 +15,10 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 <?php endif; ?>
 <!--met ton code ici-->
 <div class="detailnouvelle">
-    <div class="nouvelleBackground">
+    <div class="nouvelleBackground cat--<?php
+			$category = get_the_category();
+			echo $category[0]->cat_name;
+			?>">
         <div class="blocImageCategorie">
             <h5 class="categorieNouvelle"> <?php
 			$category = get_the_category();
