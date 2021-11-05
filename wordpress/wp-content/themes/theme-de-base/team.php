@@ -17,6 +17,40 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 		<?php endif; ?>
 		
 		<?php get_template_part( 'partials/description' ); // Affiche partials/404.php ?>
+		<div class="equipe">
+			
+		<?php
+
+  $equipe = new WP_Query('post_type=equipe');
+  while ($equipe->have_posts()) : $equipe->the_post();
+?>
+ <div class="equipe--membre"  data-bs-toggle="modal" data-bs-target="#modal--<?php the_title(); ?>" id="membre--<?php the_title(); ?>">
+      <img class="equipe--img" src="<?php echo get_the_post_thumbnail_url();?>" alt="membre">
+      <h2 class="equipe--nom"><?php the_title(); ?></h2>
+      <div class="equipe--poste"><?php the_field('poste'); ?></div>
+    </div>
+
+	<div class="modal fade" id="modal<?php the_title(); ?>" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title titleCreatrice"><?php the_title(); ?></h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+		<?php the_content(); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+         <?php
+  endwhile; 
+
+  wp_reset_postdata(); 
+?>
+</div>
 <?php endwhile; // Fermeture de la boucle
 
 else : // Si aucune page n'a été trouvée
