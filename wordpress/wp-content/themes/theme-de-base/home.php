@@ -96,7 +96,14 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
             <img class='service--media' src='<?php echo $urlicone; ?>'>
             <div class='service--titre'><?php the_title(); ?></div>
             <div class='service--desc'><?php the_field('description'); ?></div>
-            <a href='<?php the_permalink(); ?>' class='service--bouton'>EN SAVOIR PLUS</a>
+            <a href='<?php the_permalink(); ?>' class='service--bouton'> <?php  $servicePlus = new WP_Query( array( 'post_type' => 'footer', 'meta_value' => 'Footer' ) );
+  while ($servicePlus->have_posts()) : $servicePlus->the_post();  ?> 
+  <?php the_field('serviceplus'); ?>
+  <?php
+  endwhile; 
+  wp_reset_postdata(); 
+?>
+</a>
         </div>
         <?php
   endwhile; 
@@ -121,7 +128,13 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                     </div>
                     <div class="carte__footer">
                         <p class="carte__footer__date"><?php echo get_the_date("Y-m-d"); ?></p>
-                        <a href="<?php the_permalink(); ?>">Lire plus</a>
+                        <a href="<?php the_permalink(); ?>"><?php  $nouvellePlus = new WP_Query( array( 'post_type' => 'footer', 'meta_value' => 'Footer' ) );
+  while ($nouvellePlus->have_posts()) : $nouvellePlus->the_post();  ?> 
+  <?php the_field('nouvelleplus'); ?>
+  <?php
+  endwhile; 
+  wp_reset_postdata(); 
+?></a>
                     </div>
                 </div>
                 <?php

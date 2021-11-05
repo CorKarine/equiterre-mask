@@ -2,16 +2,20 @@
 @use 'mixin/text';
 @use 'mixin/titre1';
 
+
 .nouvelleBackground{
     display: flex;
     position: relative;
+    color: white;
+    padding: 32px;
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     background-size: cover;
     margin-top: 0%;
-    background-image: url(sources/medias/accueil_arbre_hero.jpg);
+    background-image: url(assets/bloc_don_eau.jpg);
     flex-wrap: nowrap;
     align-items: center;
+    margin: 0 auto;
     justify-content: space-evenly;
 }
 .nouvelleTitre{
@@ -23,14 +27,14 @@
 }
 .nouvelleImage{
     width:30vw;
-    height:auto;
+    height:50%;
 }
 .nouvelleContraste{
     background-color: black;
     opacity: 61%;
     width: 100%;
     position: absolute;
-    height: 70vh;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: 1;
@@ -42,7 +46,7 @@
 }
 .blocNouvelle{
     background-color: variables.$terciere;
-    color: variables.$primaire;
+    color: black;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -57,20 +61,34 @@
     margin-bottom: -5vh;
 }
 .autreNouvelle{
- display: flex;
- justify-content: space-evenly;
+ display: grid;
+ background-color:variables.$primaire ;
+ grid-template-columns: 1fr 1fr 1fr;
+ padding: 32px;
+ gap:20px;
+ text-decoration: none !important;
+ height: 350px;
 }
 .nImage{
  width:20vw;
  
 }
 .lienNouvelle{
-    padding-left: 1%;
-    padding-right: 1%;
+    background-color: white;
+    padding: 10px;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
-    color: variables.$primaire;
+    color: black;
     justify-content: center;
+    text-decoration-line:none !important;
+    &a{
+        text-decoration: none !important;
+        text-decoration-line:none !important;
+    }
+    &h2{
+        text-decoration: none !important;
+    }
 }
 .lienNouvelle:hover{
     color: variables.$titleColor;
@@ -80,6 +98,13 @@
 }
 .blocImageCategorie{
     z-index: 3;
+    color: white;
+    text-decoration: none;
+    margin-right: 32px;
+    &::before{
+        content: ' ';
+    }
+
 }
 
 @media screen and (max-width: 1199px){
