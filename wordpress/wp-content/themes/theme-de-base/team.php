@@ -24,13 +24,13 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
   $equipe = new WP_Query('post_type=equipe');
   while ($equipe->have_posts()) : $equipe->the_post();
 ?>
- <div class="equipe--membre"  data-bs-toggle="modal" data-bs-target="#modal--<?php the_title(); ?>" id="membre--<?php the_title(); ?>">
+ <div class="equipe--membre"  data-bs-toggle="modal" data-bs-target="#modal--<?php the_ID() ; ?>" id="membre--<?php the_title(); ?>">
       <img class="equipe--img" src="<?php echo get_the_post_thumbnail_url();?>" alt="membre">
       <h2 class="equipe--nom"><?php the_title(); ?></h2>
       <div class="equipe--poste"><?php the_field('poste'); ?></div>
     </div>
 
-	<div class="modal fade" id="modal--<?php the_title(); ?>" tabindex="-1" >
+	<div class="modal fade" id="modal--<?php the_ID() ;?>" tabindex="-1" >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
