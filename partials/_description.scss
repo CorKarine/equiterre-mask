@@ -1,0 +1,9 @@
+@use 'mixin/text';
+@use 'variables';
+
+.description__general{
+    position: relative;
+    padding: 32px;
+    @include text.text; 
+    background-color: variables.$primaire;
+  }

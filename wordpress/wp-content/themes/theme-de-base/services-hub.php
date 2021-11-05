@@ -16,7 +16,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 		
 		<?php endif; ?>
 		
-		<?php the_content(); // Contenu principal de la page ?>
+		<?php get_template_part( 'partials/description' ); // Affiche partials/404.php ?>
 <?php endwhile; // Fermeture de la boucle
 
 else : // Si aucune page n'a été trouvée
