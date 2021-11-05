@@ -30,7 +30,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
       <div class="equipe--poste"><?php the_field('poste'); ?></div>
     </div>
 
-	<div class="modal fade" id="modal<?php the_title(); ?>" tabindex="-1" >
+	<div class="modal fade" id="modal--<?php the_title(); ?>" tabindex="-1" >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
