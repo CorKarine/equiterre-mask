@@ -2,7 +2,18 @@
 @use 'mixin/text';
 @use 'mixin/titre1';
 
-
+.cat--action{
+    background-image: url(assets/accueil_arbre_hero.jpg);
+}
+.cat--environnement{
+    background-image: url(assets/accueil_foret_hero.jpg);
+}
+.cat--recette{
+    background-image: url(assets/accueil_paysage_hero.jpg);
+}
+.cat--bourse{
+    background-image: url(assets/bloc_temoignage_mains.jpg);
+}
 .nouvelleBackground{
     display: flex;
     position: relative;
@@ -12,7 +23,6 @@
     height: 100vh;
     background-size: cover;
     margin-top: 0%;
-    background-image: url(assets/bloc_don_eau.jpg);
     flex-wrap: nowrap;
     align-items: center;
     margin: 0 auto;
