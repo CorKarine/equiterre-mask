@@ -18,6 +18,23 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 		<?php endif; ?>
 		
 		<?php get_template_part( 'partials/description' ); // Affiche partials/404.php ?>
+		<div class="detailnouvelle">
+		<div class="autreNouvelle">
+        <?php
+  $nouvelle = new WP_Query( array( 'post__not_in' => array( $post->ID ),'posts_per_page' => 3) ); // 👈 Utilisation
+  while ($nouvelle->have_posts()) : $nouvelle->the_post(); 
+?>
+        <a href="<?php the_permalink(); ?>">
+            <div class="lienNouvelle">
+                <img src="<?php echo get_the_post_thumbnail_url();?>" alt="" class="nImage">
+                <h2 class="lienTitre"><?php the_title(); ?></h2>
+            </div>
+        </a>
+        <?php
+  endwhile; 
+  wp_reset_postdata(); 
+?>
+    </div></div>
 <?php endwhile; // Fermeture de la boucle
 
 else : // Si aucune page n'a été trouvée
