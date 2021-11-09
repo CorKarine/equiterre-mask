@@ -23,7 +23,7 @@
     background-color: #fff;
     margin-bottom:40px;
     width: 100%;
-    height: auto;
+    height: 350px;
     display:grid;
     gap:16px;
     grid-template-columns: 45% 1fr;
@@ -46,6 +46,10 @@
       object-fit:cover;
       
     }
+    &__img{
+      position: relative;
+      overflow: hidden;
+    }
     &__info{
       display:flex;
       align-items:center;
@@ -66,6 +70,7 @@
       &__cartes{
         grid-template-rows: 45% 1fr;
         grid-template-columns: 1fr;
+        height: 700px;
       }
     }
   }

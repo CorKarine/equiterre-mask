@@ -20,8 +20,9 @@
     padding:16px;
     background-color: #fff;
     margin-bottom:40px;
+    overflow: hidden;
     width: 100%;
-    height: auto;
+    height: 350px;
     display:grid;
     gap:16px;
     grid-template-columns: 45% 1fr;
@@ -44,7 +45,11 @@
       object-fit:cover;
       
     }
+    &__img{
+      overflow: hidden;
+    }
     &__info{
+      overflow: hidden;
       display:flex;
       align-items:center;
       flex-wrap:wrap;
@@ -62,15 +67,16 @@
   @media (max-width: 768px){
     .hubService{
       &__carte{
-        grid-template-rows: 45% 1fr;
+        grid-template-rows: 60% 1fr;
         grid-template-columns: 1fr;
+        height: 500px;
       }
     }
   }
   @media (max-width: 462px){
     .hubService{
       &__carte{
-        height: 700px;
+        height: 500px;
       }
     }
   }
