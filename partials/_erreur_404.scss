@@ -33,7 +33,12 @@
     background-color: variables.$terciere;
 }
 .water{
-    margin-left: 87%;
+    opacity:0%;
+    margin-left: 72%;
+}
+.goute{
+    opacity:0%;
+    margin-left: 10%;
 }
 @media screen and (min-width: 1000px ){
     .text {font-size: 100px;}

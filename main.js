@@ -86,20 +86,28 @@ gsap.timeline({
     ease: "none",
   })
 
+  .to ('.water',
+    {opacity:'100%'})
  .to('.plant',
     { x: '77vw'})
   .to('.plant',
     { rotateY: '180'})
   .to('.water',
-    { y: '60vh'})
+    { y: '66vh'})
   .to ('.water',
     {opacity:'0%'})
   .to('.erreur',
     { color:'#041C04'})
+    .to ('.goute',
+    {opacity:'100%'})
   .to('.plant',
     { x: '5vw'})
   .to('.plant',
     { rotateY: '0'})
+  .to('.goute',
+    { y: '66vh'})
+  .to ('.goute',
+    {opacity:'0%'})
     .to('.erreur',
     { color:'#ECB338'})
 
