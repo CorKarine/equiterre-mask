@@ -21,12 +21,12 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 		<div class="detailService">
 		<div class="autreService">
         <?php
-  $service = new WP_Query( array( 'post__not_in' => array( $post->ID ),'posts_per_page' => 3) ); // 👈 Utilisation
+  $service = new WP_Query( array( 'post_type' => 'service', 'post__not_in' => array( $post->ID ),'posts_per_page' => 3) ); // 👈 Utilisation
   while ($service->have_posts()) : $service->the_post(); 
 ?>
         <a href="<?php the_permalink(); ?>">
             <div class="lienService">
-                <img src="<?php echo get_the_post_thumbnail_url();?>" alt="image" class="serviceImage">
+                <img src="<?php echo get_the_post_thumbnail_url();?>" alt="image" class="nImage">
                 <h2 class="lienTitre"><?php the_title(); ?></h2>
             </div>
         </a>

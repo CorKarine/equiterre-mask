@@ -3,90 +3,83 @@
 @use 'mixin/titre1';
 
 
-.service__preview{
- display: grid;
- background-color:variables.$primaire ;
- grid-template-columns: 1fr 1fr;
- padding: 32px;
- gap:20px;
- text-decoration: none !important;
- height: 350px;
+.autreService{
+    display: grid;
+    background-color:variables.$primaire ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 32px;
+    gap:20px;
+    text-decoration: none !important;
+   }
 
-
-a{
-    text-decoration:none;
+   .lienTitre{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-&__lien{
+.nImage{
+    width:100%;
+    object-fit: cover;
+    height: 100%;
+   }
+.lienService{
     background-color: white;
     padding: 10px;
-    height: 100%;
+    height: 450px;
+    color: black;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20vw 1fr;
-
-    color: black;
-    justify-content: center;
+    grid-template-rows: 50% 1fr;
     text-decoration-line:none !important;
     
     &h2{
         text-decoration: none !important;
     }
-    .preview--img{
- width:20vw;
- 
 }
-}
-}
-.preview--titre:hover{
+
+.lienService:hover{
     color: variables.$titleColor;
 }
-
-@media (max-width: 800px){
-    .service__preview{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+a{
+    text-decoration:none;
+}
+@media screen and (max-width: 1199px){
+    .autreService{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
-    .preview--img{
-        width:40vw;
-        margin-top: 10vh;
+    .lienService{
+        grid-template-columns:50% 1fr;
+        grid-template-rows:  1fr;
+        height: 300px;
+    }
     
-    }
-    
-    .service__preview__lien {
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        flex-direction: row;
-        align-items: center;
-        width:100vw;
-        
-    }
-    .preview--titre{
-        margin-top:8vh;
+    .serviceImage{
+        width:30vw;
+        height:50%;
     }
 }
-@media (max-width: 375px){
-    .service__preview{
+@media screen and (max-width: 900px){
+    .autreService{
         flex-direction: column;
         justify-content: space-evenly;
     }
-    .preview--img{
-        width:40vw;
-        margin-top: 0vh;
-    
-    }
-    .service__preview__lien {
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        flex-direction: row;
-        align-items: center;
-        width:100vw;
+    .lienService {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 1fr;
+        width:100%;
         margin-top:2vh;
-        
+        height: 300px;
     }
-    .preview--titre{
+    .lienTitre{
         margin-top:0vh;
     }
+    
+    .serviceImage{
+        width:100%;
+        height:auto;
+    }
 
 }
-
