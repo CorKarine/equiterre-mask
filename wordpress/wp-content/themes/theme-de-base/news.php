@@ -14,29 +14,30 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 <?php if (!is_front_page()) : // Si nous ne sommes PAS sur la page d'accueil ?>
 <?php endif; ?>
 <!--met ton code ici-->
-<div class="detailnouvelle">
+<div itemscope itemtype="https://schema.org/NewsArticle" class="detailnouvelle">
     <div class="nouvelleBackground cat--<?php
 			$category = get_the_category();
 			echo $category[0]->cat_name;
 			?>">
         <div class="blocImageCategorie">
-            <h5 class="categorieNouvelle"> <?php
+            <h5 itemprop="about" class="categorieNouvelle"> <?php
 			$category = get_the_category();
 			echo $category[0]->cat_name;
 			?></h5>
-            <img src="<?php echo get_the_post_thumbnail_url();?>" alt="arc" class="nouvelleImage">
+            <img itemprop="image" src="<?php echo get_the_post_thumbnail_url();?>" alt="arc" class="nouvelleImage">
         </div>
         <div class="blocTitreNouvelle">
-            <h1 class="nouvelleTitre"> <?php the_title(); ?></h1>
-            <h3 class="blocPublie"><?php the_date(); ?></h3>
-            <h3 class="blocAuteur"><?php the_author(); ?></h3>
+            <h1 itemprop="name" class="nouvelleTitre"> <?php the_title(); ?></h1>
+            <h3 itemprop="datePublished" class="blocPublie"><?php the_date(); ?></h3>
+            <h3 itemprop="author" class="blocAuteur"><?php the_author(); ?></h3>
         </div>
         <div class="nouvelleContraste">
         </div>
 
     </div>
+    <div itemprop="articleBody">
     <?php get_template_part( 'partials/description' ); // Affiche partials/404.php ?>
-
+</div>
     <div class="autreNouvelle">
         <?php
   $nouvelle = new WP_Query( array( 'post__not_in' => array( $post->ID ),'posts_per_page' => 3) ); // 👈 Utilisation
