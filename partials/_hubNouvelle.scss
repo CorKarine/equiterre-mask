@@ -1,4 +1,4 @@
-@use 'mixin/titre3';
+@use 'mixin/titre2';
 @use 'mixin/text';
 @use 'variables';
 @use "sass:color";
@@ -57,7 +57,7 @@
     }
     .cartes{
       &--titre{
-        @include titre3.title3;
+        @include titre2.title2;
       }
       &--desc{
         @include text.text;
