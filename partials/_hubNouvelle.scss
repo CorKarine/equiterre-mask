@@ -1,4 +1,4 @@
-@use 'mixin/titre2';
+@use 'mixin/titre3';
 @use 'mixin/text';
 @use 'variables';
 @use "sass:color";
@@ -57,7 +57,7 @@
     }
     .cartes{
       &--titre{
-        @include titre2.title2;
+        @include titre3.title3;
       }
       &--desc{
         @include text.text;
@@ -68,7 +68,7 @@
   @media (max-width: 768px){
     .hubNouvelle{
       &__cartes{
-        grid-template-rows: 45% 1fr;
+        grid-template-rows: 60% 1fr;
         grid-template-columns: 1fr;
         height: 700px;
       }
