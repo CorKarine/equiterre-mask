@@ -14,6 +14,9 @@
         crossorigin="anonymous"></script>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
+<meta property="og:title" content="<?php the_title();?>">
+<meta property="og:description" content="<?php the_content();?>">
+<meta property="og:image" content="<?php echo get_the_post_thumbnail_url();?>">
 <title>
 	<?php bloginfo('name'); // Affiche le nom du blog ?> | 
 	<?php is_front_page() ? bloginfo('description') : wp_title(''); // si nous sommes sur la page d'accueil, affichez la description à partir des paramètres du site - sinon, affichez le titre du post ou de la page. ?>
