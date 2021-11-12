@@ -58,7 +58,6 @@
     background-color: variables.$terciere;
     color: black;
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -74,14 +73,21 @@
  display: grid;
  background-color:variables.$primaire ;
  grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: 1fr;
  padding: 32px;
  gap:20px;
  text-decoration: none !important;
- height: 350px;
+}
+.lienTitre{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nImage{
- width:20vw;
- 
+ width:100%;
+ object-fit: cover;
+ height: 100%;
 }
 a{
     text-decoration:none;
@@ -89,11 +95,11 @@ a{
 .lienNouvelle{
     background-color: white;
     padding: 10px;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    height: 450px;
     color: black;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 1fr;
     text-decoration-line:none !important;
     
     &h2{
@@ -118,30 +124,14 @@ a{
 }
 
 @media screen and (max-width: 1199px){
-    .blocNouvelle{height: 200vh;}
     .autreNouvelle{
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .nImage{
-        width:40vw;
-        margin-top: 10vh;
-    
-    }
-    .textNouvelle{
-        margin-bottom: -40vh;
-        margin-top: -10vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
     .lienNouvelle {
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        flex-direction: row;
-        align-items: center;
-        width:100vw;
-        
-    }
-    .lienTitre{
-        margin-top:8vh;
+        grid-template-columns:50% 1fr;
+        grid-template-rows:  1fr;
+        height: 300px;
     }
     .nouvelleBackground{
         flex-wrap: wrap;
@@ -152,29 +142,17 @@ a{
         height:auto;
     }
 }
-@media screen and (max-width: 375px){
-    .blocNouvelle{height: 200vh;}
+@media screen and (max-width: 900px){
     .autreNouvelle{
         flex-direction: column;
         justify-content: space-evenly;
     }
-    .nImage{
-        width:40vw;
-        margin-top: 0vh;
-    
-    }
-    .textNouvelle{
-        margin-bottom: -7vh;
-        margin-top: 10vh;
-    }
     .lienNouvelle {
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        flex-direction: row;
-        align-items: center;
-        width:100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 1fr;
+        width:100%;
         margin-top:2vh;
-        
+        height: 300px;
     }
     .lienTitre{
         margin-top:0vh;
@@ -184,7 +162,7 @@ a{
         flex-direction: column;
     }
     .nouvelleImage{
-        width:100vw;
+        width:100%;
         height:auto;
     }
 

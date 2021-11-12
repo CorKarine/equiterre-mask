@@ -22,18 +22,18 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
   $serviceHub = new WP_Query('post_type=service'); // 👈 Utilisation
   while ($serviceHub->have_posts()) : $serviceHub->the_post(); 
 ?>
-	<a href="<?php the_permalink(); ?>" class="hubService__carte">
-	
-	<div class="hubService__carte__img">
-	<img src="<?php echo get_the_post_thumbnail_url();?>">
-	</div>
-	<div class="hubService__carte__info">
-	<h3 class="carte--titre"><?php the_title(); ?></h3>
-	<div class="carte--desc">
-	<?php the_field('description'); ?>
-    </div>
-	</div>
-	</a>
+    <a href="<?php the_permalink(); ?>" class="hubService__carte">
+
+        <div class="hubService__carte__img">
+            <img src="<?php echo get_the_post_thumbnail_url();?>">
+        </div>
+        <div class="hubService__carte__info">
+            <h3 class="carte--titre"><?php the_title(); ?></h3><br><br>
+            <p class="carte--desc">
+                <?php the_field('description'); ?>
+            </p>
+        </div>
+    </a>
     <?php
   endwhile; 
   wp_reset_postdata(); 

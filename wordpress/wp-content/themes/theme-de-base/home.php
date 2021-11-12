@@ -122,7 +122,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                     <div class="carte__contraste"></div>
                     <img src="<?php echo get_the_post_thumbnail_url();?>" alt="">
                     <div class="carte__info">
-                        <h4 class='carte__info__titre'><?php the_title(); ?></h4>
+                        <h4 class='carte__info__titre'><?php $title = get_the_title(); echo mb_strimwidth($title, 0, 60, '...');?></h4>
                         <div class='carte__info__desc'>
                             <?php $content = get_the_content(); echo mb_strimwidth($content, 0, 90, '...');?></div>
                     </div>

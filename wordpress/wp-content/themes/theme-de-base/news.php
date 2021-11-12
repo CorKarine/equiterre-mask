@@ -44,8 +44,8 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 ?>
         <a href="<?php the_permalink(); ?>">
             <div class="lienNouvelle">
-                <img src="<?php echo get_the_post_thumbnail_url();?>" alt="" class="nImage">
-                <h2 class="lienTitre"><?php the_title(); ?></h2>
+                <img src="<?php echo get_the_post_thumbnail_url();?>" alt="" class="nImage"> 
+                <h2 class="lienTitre"><?php $title = get_the_title(); echo mb_strimwidth($title, 0, 60, '...');?></h2>
             </div>
         </a>
         <?php
