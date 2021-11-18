@@ -81,3 +81,20 @@
       }
     }
   }
+  
+  .plus__nouvelle {
+    width: 90px;
+    font-size:16px;
+    text-decoration:none;
+    color:#fff;
+    background:#231f20;
+    padding:10px 10px 10px 10px;
+    border-radius:4px;
+    border:none;
+    transition: background 0.5s;
+  }
+  .plus__nouvelle:hover {
+    background:#cea052;
+    border: none;
+  }
+  
