@@ -97,7 +97,7 @@ gsap.timeline({
   .to ('.water',
     {opacity:'0%'})
   .to('.erreur',
-    { color:'#041C04'})
+    { color:'white'})
   .to('.animation',
     { x: '0vw'})
   .to('.plant',
