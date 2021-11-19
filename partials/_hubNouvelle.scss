@@ -2,7 +2,9 @@
 @use 'mixin/text';
 @use 'variables';
 @use "sass:color";
-
+body{
+  background-color: variables.$primaire;
+}
   .hubNouvelle{
     display: block;
     background-color: variables.$primaire;
@@ -92,9 +94,16 @@
     border-radius:4px;
     border:none;
     transition: background 0.5s;
+    margin-left: 32px;
+    margin-top: 32px;
   }
   .plus__nouvelle:hover {
     background:#cea052;
     border: none;
   }
-  
+  .ordre__nouvelle{
+    border:none;
+    width: 150px;
+    height: 20px;
+    margin: 32px;
+  }

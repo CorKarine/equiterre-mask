@@ -164,42 +164,97 @@ gsap.timeline({
      scale: 0.7
       }, 2)
    
-      fetch('https://equiterre.qc.lu/wp-json/wp/v2/posts?_embed')
-      .then(response => response.json())
-      .then(data => {
-          
+      let ordre = document.querySelector("select");
+class Nouvelle {
+  constructor(value) {
+    fetch(
+        `https://equiterre.qc.lu/wp-json/wp/v2/posts?_embed&orderby=date&order=${value}&per_page=6`
+      )
+        .then((response) => response.json())
+        .then((data) => {
           let html = "";
-          let preview = document.querySelector('.hubNouvelle');
-        for (let i=0; i<6;i++){
-          if(i>0){
-            html += `<a href="${data[i].link}">
-            <div class="hubNouvelle__cartes">
-              <div class="hubNouvelle__cartes__img">
-              <img src="${data[i]._embedded['wp:featuredmedia'][0].source_url}">
-              </div>
-              <div class="hubNouvelle__cartes__info">
-              <h3 class="cartes--titre">${data[i].title.rendered}</h3>
-              <div class="cartes--desc">
-              ${data[i].excerpt.rendered}
-              </div>
-              </div>
-            </div>
-            </a>`;
-          preview.innerHTML = html;
-          } if(i==0){
-            html += `<a href="${data[i].link}">
-            <div class="hubNouvelle__cartes hubNouvelle__cartes--first">
-              <div class="hubNouvelle__cartes__img">
-              <img src="${data[i]._embedded['wp:featuredmedia'][0].source_url}">
-              </div>
-              <div class="hubNouvelle__cartes__info">
-              <h3 class="cartes--titre">${data[i].title.rendered}</h3>
-              <div class="cartes--desc">
-              ${data[i].excerpt.rendered}
-              </div>
-              </div>
-            </div>
-            </a>`; 
+          let preview = document.querySelector(".hubNouvelle");
+          for (let i = 0; i < 6; i++) {
+            if (i > 0) {
+              html += `<div class="hubNouvelle__cartes">
+        <div class="hubNouvelle__cartes__img">
+        <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}">
+        </div>
+        <div class="hubNouvelle__cartes__info">
+        <h3 class="cartes--titre">${data[i].title.rendered}</h3>
+        <div class="cartes--desc">
+        ${data[i].excerpt.rendered}
+        </div>
+        </div>
+      </div>`;
+              preview.innerHTML = html;
+            }
+            if (i == 0) {
+              let preview = document.querySelector(".hubNouvelle");
+              html += `<div class="hubNouvelle__cartes hubNouvelle__cartes--first">
+        <div class="hubNouvelle__cartes__img">
+        <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}">
+        </div>
+        <div class="hubNouvelle__cartes__info">
+        <h3 class="cartes--titre">${data[i].title.rendered}</h3>
+        <div class="cartes--desc">
+        ${data[i].excerpt.rendered}
+        </div>
+        </div>
+      </div>`;
+            }
           }
-        } 
-      });
+        });
+    let btn = document.querySelector(".plus__nouvelle");
+    var plus = 6;
+    btn.addEventListener("click", function () {
+      plus += 6;
+      
+      fetch(
+        `https://equiterre.qc.lu/wp-json/wp/v2/posts?_embed&orderby=date&order=${value}&per_page=${plus}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          let html = "";
+          let preview = document.querySelector(".hubNouvelle");
+        if(plus > data.length){
+          document.querySelector('button').style.display='none';
+        }
+          for (let i = 0; i < plus; i++) {
+            if (i > 0) {
+              html += `<div class="hubNouvelle__cartes">
+        <div class="hubNouvelle__cartes__img">
+        <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}">
+        </div>
+        <div class="hubNouvelle__cartes__info">
+        <h3 class="cartes--titre">${data[i].title.rendered}</h3>
+        <div class="cartes--desc">
+        ${data[i].excerpt.rendered}
+        </div>
+        </div>
+      </div>`;
+              preview.innerHTML = html;
+            }
+            if (i == 0) {
+              let preview = document.querySelector(".hubNouvelle");
+              html += `<div class="hubNouvelle__cartes hubNouvelle__cartes--first">
+        <div class="hubNouvelle__cartes__img">
+        <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}">
+        </div>
+        <div class="hubNouvelle__cartes__info">
+        <h3 class="cartes--titre">${data[i].title.rendered}</h3>
+        <div class="cartes--desc">
+        ${data[i].excerpt.rendered}
+        </div>
+        </div>
+      </div>`;
+            }
+          }
+        });
+    });
+  }
+}
+new Nouvelle(ordre.value);
+ordre.addEventListener("change", () => {
+  new Nouvelle(ordre.value);
+});

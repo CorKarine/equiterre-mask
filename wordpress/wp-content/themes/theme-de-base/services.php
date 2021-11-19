@@ -13,11 +13,11 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 ?>
 		<?php if (!is_front_page()) : // Si nous ne sommes PAS sur la page d'accueil ?>
 			
-				<?php get_template_part( 'partials/headerGeneral' ); // Affiche partials/404.php ?>
+				<?php get_template_part( 'partials/headerGeneral' ); ?>
 		
 		<?php endif; ?>
 		
-		<?php get_template_part( 'partials/description' ); // Affiche partials/404.php ?>
+		<?php get_template_part( 'partials/description' ); ?>
 		<div class="detailService">
 		<div class="autreService">
         <?php

@@ -20,16 +20,16 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 			echo $category[0]->cat_name;
 			?>">
         <div class="blocImageCategorie">
-            <h5 itemprop="about" class="categorieNouvelle"> <?php
-			$category = get_the_category();
-			echo $category[0]->cat_name;
-			?></h5>
             <img itemprop="image" src="<?php echo get_the_post_thumbnail_url();?>" alt="arc" class="nouvelleImage">
         </div>
         <div class="blocTitreNouvelle">
             <h1 itemprop="name" class="nouvelleTitre"> <?php the_title(); ?></h1>
             <h3 itemprop="datePublished" class="blocPublie"><?php the_date(); ?></h3>
             <h3 itemprop="author" class="blocAuteur"><?php the_author(); ?></h3>
+            <h5 itemprop="about" class="categorieNouvelle"> <?php
+			$category = get_the_category();
+			echo $category[0]->cat_name;
+			?></h5>
         </div>
         <div class="nouvelleContraste">
         </div>

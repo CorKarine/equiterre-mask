@@ -38,7 +38,8 @@
     width: 100%;
     height: 100vmin;
     position: relative;
-    background-color: variables.$terciere;
+    overflow: hidden;
+    background-color: variables.$secondaire;
 }
 .water{
     height:auto;
