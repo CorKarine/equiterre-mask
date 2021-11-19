@@ -11,6 +11,8 @@
   wp_reset_postdata(); 
 ?>
     </div>
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/PlantDoodle.png" alt="PlantDoodle" width="500"
-        height="333" class="plant">
+        <div class="animation">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/PlantDoodle.png" alt="PlantDoodle" width="100%" height="auto" class="plant">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/water_drop_icon.png" alt="Water"  width="4%" height="auto" class="water">   
+  </div>
 </div>

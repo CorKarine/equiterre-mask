@@ -34,7 +34,8 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
   endwhile; 
   wp_reset_postdata(); 
 ?>
-    </div></div>
+    </div>
+</div>
 <?php endwhile; // Fermeture de la boucle
 
 else : // Si aucune page n'a été trouvée
