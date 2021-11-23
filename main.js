@@ -176,7 +176,7 @@ class Nouvelle {
           let preview = document.querySelector(".hubNouvelle");
           for (let i = 0; i < 6; i++) {
             if (i > 0) {
-              html += `<div class="hubNouvelle__cartes">
+              html += `<a href=${data[i].link} class="hubNouvelle__cartes">
         <div class="hubNouvelle__cartes__img">
         <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}">
         </div>
@@ -186,12 +186,12 @@ class Nouvelle {
         ${data[i].excerpt.rendered}
         </div>
         </div>
-      </div>`;
+      </a>`;
               preview.innerHTML = html;
             }
             if (i == 0) {
               let preview = document.querySelector(".hubNouvelle");
-              html += `<div class="hubNouvelle__cartes hubNouvelle__cartes--first">
+              html += `<a href=${data[i].link} class="hubNouvelle__cartes hubNouvelle__cartes--first">
         <div class="hubNouvelle__cartes__img">
         <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}">
         </div>
@@ -201,7 +201,7 @@ class Nouvelle {
         ${data[i].excerpt.rendered}
         </div>
         </div>
-      </div>`;
+      </a>`;
             }
           }
         });
@@ -218,11 +218,11 @@ class Nouvelle {
           let html = "";
           let preview = document.querySelector(".hubNouvelle");
         if(plus > data.length){
-          document.querySelector('button').style.display='none';
+          btn.style.display='none';
         }
           for (let i = 0; i < plus; i++) {
             if (i > 0) {
-              html += `<div class="hubNouvelle__cartes">
+              html += `<a href=${data[i].link} class="hubNouvelle__cartes">
         <div class="hubNouvelle__cartes__img">
         <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}">
         </div>
@@ -232,12 +232,12 @@ class Nouvelle {
         ${data[i].excerpt.rendered}
         </div>
         </div>
-      </div>`;
+      </a>`;
               preview.innerHTML = html;
             }
             if (i == 0) {
               let preview = document.querySelector(".hubNouvelle");
-              html += `<div class="hubNouvelle__cartes hubNouvelle__cartes--first">
+              html += `<a href=${data[i].link} class="hubNouvelle__cartes hubNouvelle__cartes--first">
         <div class="hubNouvelle__cartes__img">
         <img src="${data[i]._embedded["wp:featuredmedia"][0].source_url}">
         </div>
@@ -247,7 +247,7 @@ class Nouvelle {
         ${data[i].excerpt.rendered}
         </div>
         </div>
-      </div>`;
+      </a>`;
             }
           }
         });

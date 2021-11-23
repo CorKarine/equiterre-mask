@@ -17,10 +17,10 @@ body{
     padding:32px;
     a{
         text-decoration: none;
-        color: black;
     }
   &__cartes{
     display: block;
+    color: black;
     padding:16px;
     background-color: #fff;
     margin-bottom:40px;
@@ -33,13 +33,15 @@ body{
     &:hover{
         background-color: color.adjust(variables.$terciere, $lightness: 50%);
         cursor: pointer;
+        color: black;
     }
     &--first{
-        background-color: variables.$terciere;
+      background-color: variables.$terciere;
       color:white;
       &:hover{
         background-color: color.adjust(variables.$terciere, $lightness: -10%);
         cursor: pointer;
+        color: white;
     }
     }
     img{
