@@ -63,9 +63,6 @@
           </div>
         </div>
       </nav>
-	<nav>
-		
-	</nav>
 </header>
 
 <main><!-- Débute le contenu principal de notre site -->
