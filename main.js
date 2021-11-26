@@ -167,8 +167,9 @@ gsap.timeline({
       let ordre = document.querySelector("select");
 class Nouvelle {
   constructor(value) {
+    let langue = document.querySelector(".hubNouvelle").id;
     fetch(
-        `https://equiterre.qc.lu/wp-json/wp/v2/posts?_embed&orderby=date&order=${value}&per_page=6`
+        `https://equiterre.qc.lu/${langue}/wp-json/wp/v2/posts?_embed&orderby=date&order=${value}&per_page=6`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -211,7 +212,7 @@ class Nouvelle {
       plus += 6;
       
       fetch(
-        `https://equiterre.qc.lu/wp-json/wp/v2/posts?_embed&orderby=date&order=${value}&per_page=${plus}`
+        `https://equiterre.qc.lu/${langue}/wp-json/wp/v2/posts?_embed&orderby=date&order=${value}&per_page=${plus}`
       )
         .then((response) => response.json())
         .then((data) => {

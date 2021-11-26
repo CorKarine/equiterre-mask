@@ -2,16 +2,16 @@
 @use 'mixin/text';
 @use 'mixin/titre1';
 
-.cat--action{
+.cat--action, .cat--event{
     background-image: url(assets/accueil_arbre_hero.jpg);
 }
-.cat--environnement{
+.cat--environnement, .cat--environment{
     background-image: url(assets/bloc_temoignage_mains.jpg);
 }
-.cat--recette{
+.cat--recette, .cat--recipe{
     background-image: url(assets/accueil_paysage_hero.JPG);
 }
-.cat--bourse{
+.cat--bourse, .cat--bursary{
     background-image: url(assets/accueil_foret_hero.jpg);
 }
 .nouvelleBackground{

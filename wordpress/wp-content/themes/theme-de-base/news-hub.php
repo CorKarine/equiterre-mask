@@ -21,7 +21,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
     <option value="desc"><?php the_field('nouvelle_recente'); ?></option>
     <option value="asc"><?php the_field('ancienne_nouvelle'); ?></option>
 </select>
-<div class="hubNouvelle">
+<div class="hubNouvelle" id="<?php the_field('langage'); ?>" >
 </div>
 <button class='plus__nouvelle'><?php the_field('bouton_nouvelle'); ?></button>
 <?php
