@@ -167,6 +167,14 @@ gsap.timeline({
       let ordre = document.querySelector("select");
 class Nouvelle {
   constructor(value) {
+    let plus = 6;
+     let btn = document.querySelector(".plus__nouvelle");
+    let ordre = document.querySelector("select");
+   ordre.addEventListener("change", () => {
+    plus = 6;
+     btn.style.display='block';
+    });
+    console.log(plus);
     let langue = document.querySelector(".hubNouvelle").id;
     fetch(
         `https://equiterre.qc.lu/${langue}/wp-json/wp/v2/posts?_embed&orderby=date&order=${value}&per_page=6`
@@ -206,11 +214,11 @@ class Nouvelle {
             }
           }
         });
-    let btn = document.querySelector(".plus__nouvelle");
-    var plus = 6;
+   
+    
     btn.addEventListener("click", function () {
       plus += 6;
-      
+      console.log(plus);
       fetch(
         `https://equiterre.qc.lu/${langue}/wp-json/wp/v2/posts?_embed&orderby=date&order=${value}&per_page=${plus}`
       )
